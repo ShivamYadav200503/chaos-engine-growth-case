@@ -1,0 +1,236 @@
+creative_id,network,creative_type,first_seen,last_seen
+B-K001,Net-A,display (network auto-assembles video/image/playable),2025-01-06,2025-09-28
+B-K002,Net-A,search text ad,2025-01-06,2025-09-28
+B-K003,Net-B,set: contents unknown,2025-01-07,2025-01-07
+B-K004,Net-B,set: contents unknown,2025-01-09,2025-03-25
+B-K005,Net-B,set: contents unknown,2025-01-11,2025-06-18
+B-K006,Net-A,video (video platform),2025-01-16,2025-09-26
+B-K007,Net-B,set: video,2025-01-24,2025-08-09
+B-K008,Net-B,set: video + interactive end-card,2025-01-31,2025-04-16
+B-K009,Net-B,set: video + interactive end-card,2025-01-31,2025-04-16
+B-K010,Net-B,set: video + interactive end-card,2025-02-01,2025-03-22
+B-K011,Net-B,set: playable (+ possibly video),2025-02-07,2025-03-19
+B-K012,Net-B,set: playable (+ possibly video),2025-02-09,2025-04-28
+B-K013,Net-B,set: video + interactive end-card,2025-02-12,2025-03-19
+B-K014,Net-B,set: contents unknown,2025-02-12,2025-03-18
+B-K015,Net-B,set: contents unknown,2025-02-12,2025-04-28
+B-K016,Net-B,set: video + interactive end-card,2025-02-12,2025-07-04
+B-K017,Net-B,set: playable (+ possibly video),2025-02-28,2025-09-04
+B-K018,Net-B,set: playable (+ possibly video),2025-02-28,2025-04-29
+B-K019,Net-B,set: video + interactive end-card,2025-02-28,2025-08-26
+B-K020,Net-B,set: playable (+ possibly video),2025-02-28,2025-03-07
+B-K021,Net-B,set: video + interactive end-card,2025-02-28,2025-03-20
+B-K022,Net-B,set: video + playable,2025-03-01,2025-03-18
+B-K023,Net-B,set: video + playable,2025-03-01,2025-04-30
+B-K024,Net-B,set: playable (+ possibly video),2025-03-01,2025-03-08
+B-K025,Net-B,set: video + playable,2025-03-01,2025-03-20
+B-K026,Net-B,set: playable (+ possibly video),2025-03-06,2025-03-19
+B-K027,Net-B,set: video + playable,2025-03-06,2025-06-17
+B-K028,Net-B,set: video + playable,2025-03-06,2025-03-22
+B-K029,Net-B,set: playable (+ possibly video),2025-03-07,2025-03-21
+B-K030,Net-B,set: contents unknown,2025-03-10,2025-04-14
+B-K031,Net-B,set: contents unknown,2025-03-13,2025-04-10
+B-K032,Net-F,unknown (name not descriptive),2025-03-15,2025-03-31
+B-K033,Net-F,unknown (name not descriptive),2025-03-15,2025-03-31
+B-K034,Net-F,unknown (name not descriptive),2025-03-15,2025-03-31
+B-K035,Net-F,unknown (name not descriptive),2025-03-15,2025-03-31
+B-K036,Net-F,unknown (name not descriptive),2025-03-15,2025-03-31
+B-K037,Net-F,unknown (name not descriptive),2025-03-15,2025-03-31
+B-K038,Net-F,unknown (name not descriptive),2025-03-15,2025-03-27
+B-K039,Net-F,video,2025-03-15,2025-03-19
+B-K040,Net-F,video,2025-03-15,2025-03-31
+B-K041,Net-F,video,2025-03-15,2025-03-30
+B-K042,Net-F,static,2025-03-16,2025-03-31
+B-K043,Net-E,video,2025-03-24,2025-05-28
+B-K044,Net-E,video,2025-03-24,2025-05-28
+B-K045,Net-E,video,2025-03-24,2025-05-28
+B-K046,Net-E,video,2025-03-24,2025-05-28
+B-K047,Net-E,playable,2025-03-24,2025-05-28
+B-K048,Net-E,video,2025-03-24,2025-05-28
+B-K049,Net-E,video,2025-03-24,2025-05-28
+B-K050,Net-E,video,2025-03-24,2025-05-28
+B-K051,Net-E,video,2025-03-24,2025-05-28
+B-K052,Net-E,video,2025-03-24,2025-05-28
+B-K053,Net-E,video,2025-03-24,2025-05-28
+B-K054,Net-E,video,2025-03-24,2025-05-28
+B-K055,Net-E,video,2025-03-24,2025-05-28
+B-K056,Net-E,video,2025-03-24,2025-05-28
+B-K057,Net-E,video,2025-03-24,2025-05-28
+B-K058,Net-E,video,2025-03-24,2025-05-28
+B-K059,Net-E,playable,2025-03-24,2025-05-28
+B-K060,Net-E,playable,2025-03-24,2025-05-28
+B-K061,Net-B,set: contents unknown,2025-03-24,2025-04-28
+B-K062,Net-E,playable,2025-03-24,2025-05-28
+B-K063,Net-E,playable,2025-03-24,2025-05-28
+B-K064,Net-E,playable,2025-03-24,2025-05-28
+B-K065,Net-B,set: video + interactive end-card,2025-03-29,2025-04-03
+B-K066,Net-B,set: contents unknown,2025-04-01,2025-04-16
+B-K067,Net-B,set: contents unknown,2025-04-01,2025-04-16
+B-K068,Net-C,playable (+ possibly video),2025-04-02,2025-04-18
+B-K069,Net-C,playable (+ possibly video),2025-04-02,2025-05-20
+B-K070,Net-C,playable (+ possibly video),2025-04-02,2025-08-11
+B-K071,Net-C,playable (+ possibly video),2025-04-02,2025-09-05
+B-K072,Net-C,playable (+ possibly video),2025-04-02,2025-05-02
+B-K073,Net-C,playable (+ possibly video),2025-04-02,2025-09-02
+B-K074,Net-C,playable (+ possibly video),2025-04-02,2025-04-18
+B-K075,Net-C,playable (+ possibly video),2025-04-02,2025-09-28
+B-K076,Net-E,static,2025-04-03,2025-05-28
+B-K077,Net-E,static,2025-04-03,2025-05-28
+B-K078,Net-E,static,2025-04-03,2025-05-28
+B-K079,Net-E,static,2025-04-03,2025-05-28
+B-K080,Net-E,static,2025-04-03,2025-05-28
+B-K081,Net-E,static,2025-04-03,2025-05-28
+B-K082,Net-E,static,2025-04-03,2025-05-28
+B-K083,Net-E,static,2025-04-03,2025-05-28
+B-K084,Net-E,static,2025-04-03,2025-05-28
+B-K085,Net-E,static,2025-04-03,2025-05-28
+B-K086,Net-E,static,2025-04-03,2025-05-28
+B-K087,Net-C,playable (+ possibly video),2025-04-03,2025-05-02
+B-K088,Net-E,static,2025-04-03,2025-05-28
+B-K089,Net-E,static,2025-04-03,2025-05-28
+B-K090,Net-E,static,2025-04-03,2025-05-28
+B-K091,Net-E,static,2025-04-03,2025-05-28
+B-K092,Net-E,static,2025-04-03,2025-05-28
+B-K093,Net-E,static,2025-04-03,2025-05-28
+B-K094,Net-E,static,2025-04-03,2025-05-28
+B-K095,Net-E,static,2025-04-03,2025-05-28
+B-K096,Net-E,static,2025-04-03,2025-05-28
+B-K097,Net-E,static,2025-04-03,2025-05-28
+B-K098,Net-E,static,2025-04-03,2025-05-28
+B-K099,Net-E,static,2025-04-03,2025-05-28
+B-K100,Net-E,static,2025-04-03,2025-05-28
+B-K101,Net-E,static,2025-04-04,2025-05-28
+B-K102,Net-E,static,2025-04-04,2025-05-28
+B-K103,Net-E,static,2025-04-04,2025-05-28
+B-K104,Net-E,static,2025-04-04,2025-05-28
+B-K105,Net-E,static,2025-04-04,2025-05-28
+B-K106,Net-B,set: contents unknown,2025-04-04,2025-04-17
+B-K107,Net-B,set: contents unknown,2025-04-04,2025-04-29
+B-K108,Net-E,static,2025-04-04,2025-05-28
+B-K109,Net-C,video + interactive end-card,2025-04-12,2025-09-02
+B-K110,Net-C,video + interactive end-card,2025-04-12,2025-08-11
+B-K111,Net-B,set: playable (+ possibly video),2025-04-23,2025-08-25
+B-K112,Net-B,set: contents unknown,2025-04-23,2025-06-14
+B-K113,Net-B,set: video,2025-04-24,2025-05-20
+B-K114,Net-B,set: contents unknown,2025-04-24,2025-05-21
+B-K115,Net-B,set: playable (+ possibly video),2025-04-28,2025-06-13
+B-K116,Net-E,playable,2025-04-28,2025-05-28
+B-K117,Net-E,playable,2025-04-28,2025-05-28
+B-K118,Net-E,playable,2025-04-28,2025-05-28
+B-K119,Net-E,playable,2025-04-28,2025-05-28
+B-K120,Net-E,static,2025-04-28,2025-05-28
+B-K121,Net-B,set: video + interactive end-card,2025-04-28,2025-08-27
+B-K122,Net-E,video,2025-04-28,2025-05-28
+B-K123,Net-E,static,2025-04-28,2025-05-28
+B-K124,Net-E,static,2025-04-28,2025-05-29
+B-K125,Net-E,video,2025-04-28,2025-05-28
+B-K126,Net-E,static,2025-04-28,2025-05-07
+B-K127,Net-E,static,2025-04-28,2025-05-06
+B-K128,Net-E,video,2025-04-28,2025-05-28
+B-K129,Net-E,static,2025-04-28,2025-05-28
+B-K130,Net-E,video,2025-04-28,2025-05-28
+B-K131,Net-E,static,2025-04-28,2025-05-06
+B-K132,Net-B,set: video + playable,2025-04-29,2025-05-21
+B-K133,Net-B,set: playable (+ possibly video),2025-05-02,2025-06-16
+B-K134,Net-B,set: contents unknown,2025-05-02,2025-06-12
+B-K135,Net-C,video + interactive end-card,2025-05-03,2025-05-20
+B-K136,Net-C,video + interactive end-card,2025-05-03,2025-09-28
+B-K137,Net-C,video + interactive end-card,2025-05-03,2025-09-28
+B-K138,Net-E,playable,2025-05-06,2025-05-28
+B-K139,Net-E,playable,2025-05-06,2025-05-28
+B-K140,Net-E,video,2025-05-06,2025-05-28
+B-K141,Net-E,video,2025-05-06,2025-05-28
+B-K142,Net-E,video,2025-05-06,2025-05-28
+B-K143,Net-E,video,2025-05-06,2025-05-28
+B-K144,Net-A,search text ad (partner sites),2025-05-07,2025-09-28
+B-K145,Net-C,video + interactive end-card,2025-05-16,2025-09-02
+B-K146,Net-B,set: video + playable,2025-05-20,2025-06-18
+B-K147,Net-B,set: video + playable,2025-06-06,2025-06-21
+B-K148,Net-B,set: video + playable,2025-06-06,2025-06-20
+B-K149,Net-B,set: video + playable,2025-06-06,2025-06-18
+B-K150,Net-B,set: video,2025-06-14,2025-08-12
+B-K151,Net-B,set: video,2025-06-14,2025-08-18
+B-K152,Net-B,set: video,2025-06-14,2025-06-26
+B-K153,Net-B,set: video,2025-06-14,2025-08-09
+B-K154,Net-B,set: video,2025-06-14,2025-08-21
+B-K155,Net-B,set: video,2025-06-14,2025-08-20
+B-K156,Net-B,set: video,2025-06-14,2025-08-11
+B-K157,Net-B,set: video,2025-06-14,2025-08-18
+B-K158,Net-B,set: video,2025-06-14,2025-07-01
+B-K159,Net-B,set: video,2025-06-18,2025-08-09
+B-K160,Net-B,set: video,2025-06-18,2025-08-18
+B-K161,Net-C,playable (+ possibly video),2025-06-19,2025-09-28
+B-K162,Net-C,video + playable,2025-06-19,2025-09-28
+B-K163,Net-C,video + playable,2025-06-20,2025-09-02
+B-K164,Net-C,video + playable,2025-06-20,2025-09-04
+B-K165,Net-C,video + playable,2025-06-20,2025-09-02
+B-K166,Net-C,video + playable,2025-06-25,2025-08-11
+B-K167,Net-C,video + playable,2025-06-25,2025-08-12
+B-K168,Net-C,video + playable,2025-06-25,2025-08-11
+B-K169,Net-C,video + playable,2025-06-25,2025-08-15
+B-K170,Net-B,set: video,2025-06-26,2025-07-01
+B-K171,Net-B,set: video,2025-06-26,2025-07-01
+B-K172,Net-B,set: video,2025-06-26,2025-07-06
+B-K173,Net-C,video,2025-07-16,2025-08-11
+B-K174,Net-C,video,2025-07-16,2025-08-11
+B-K175,Net-C,playable (+ possibly video),2025-07-19,2025-08-11
+B-K176,Net-C,playable (+ possibly video),2025-07-19,2025-08-10
+B-K177,Net-C,playable (+ possibly video),2025-07-19,2025-09-02
+B-K178,Net-C,playable (+ possibly video),2025-07-19,2025-08-10
+B-K179,Net-B,unknown (not reported / not descriptive),2025-07-21,2025-07-21
+B-K180,Net-B,set: video + playable,2025-07-26,2025-09-06
+B-K181,Net-C,playable (+ possibly video),2025-07-28,2025-09-02
+B-K182,Net-C,playable (+ possibly video),2025-07-28,2025-09-02
+B-K183,Net-C,playable (+ possibly video),2025-07-28,2025-09-18
+B-K184,Net-D,store image (offer-wall listing),2025-07-30,2025-09-28
+B-K185,Net-B,set: video + playable,2025-09-02,2025-09-06
+B-K186,Net-C,unknown (name not descriptive),2025-09-04,2025-09-28
+B-K187,Net-C,unknown (name not descriptive),2025-09-04,2025-09-28
+B-K188,Net-C,unknown (name not descriptive),2025-09-04,2025-09-27
+B-K189,Net-C,video,2025-09-04,2025-09-28
+B-K190,Net-C,video,2025-09-04,2025-09-26
+B-K191,Net-C,video,2025-09-04,2025-09-26
+B-K192,Net-C,video,2025-09-04,2025-09-28
+B-K193,Net-C,video,2025-09-04,2025-09-26
+B-K194,Net-C,playable (+ possibly video),2025-09-09,2025-09-28
+B-K195,Net-C,playable (+ possibly video),2025-09-09,2025-09-25
+B-K196,Net-C,playable (+ possibly video),2025-09-09,2025-09-28
+B-K197,Net-C,playable (+ possibly video),2025-09-09,2025-09-26
+B-K198,Net-C,playable (+ possibly video),2025-09-09,2025-09-28
+B-K199,Net-C,playable (+ possibly video),2025-09-10,2025-09-25
+B-K200,Net-C,playable (+ possibly video),2025-09-10,2025-09-24
+B-K201,Net-C,playable (+ possibly video),2025-09-10,2025-09-28
+B-K202,Net-C,video + playable,2025-09-10,2025-09-19
+B-K203,Net-C,playable (+ possibly video),2025-09-10,2025-09-25
+B-K204,Net-C,video,2025-09-13,2025-09-24
+B-K205,Net-C,video,2025-09-13,2025-09-24
+B-K206,Net-C,video,2025-09-13,2025-09-23
+B-K207,Net-C,video,2025-09-13,2025-09-23
+B-K208,Net-C,video,2025-09-13,2025-09-23
+B-K209,Net-C,video,2025-09-13,2025-09-24
+B-K210,Net-C,video,2025-09-13,2025-09-27
+B-K211,Net-C,video,2025-09-13,2025-09-24
+B-K212,Net-C,video,2025-09-13,2025-09-28
+B-K213,Net-C,video,2025-09-13,2025-09-23
+B-K214,Net-C,video,2025-09-13,2025-09-24
+B-K215,Net-C,video,2025-09-13,2025-09-25
+B-K216,Net-C,video,2025-09-13,2025-09-24
+B-K217,Net-C,video,2025-09-13,2025-09-24
+B-K218,Net-C,video,2025-09-13,2025-09-23
+B-K219,Net-C,video + interactive end-card,2025-09-13,2025-09-26
+B-K220,Net-C,video,2025-09-13,2025-09-24
+B-K221,Net-C,video,2025-09-13,2025-09-24
+B-K222,Net-C,video,2025-09-13,2025-09-24
+B-K223,Net-C,video,2025-09-23,2025-09-28
+B-K224,Net-C,video,2025-09-23,2025-09-28
+B-K225,Net-C,video,2025-09-23,2025-09-28
+B-K226,Net-C,video,2025-09-23,2025-09-28
+B-K227,Net-C,video + interactive end-card,2025-09-23,2025-09-28
+B-K228,Net-C,video,2025-09-23,2025-09-28
+B-K229,Net-C,video,2025-09-23,2025-09-28
+B-K230,Net-C,video + interactive end-card,2025-09-23,2025-09-26
+B-K231,Net-C,video,2025-09-23,2025-09-28
+B-K232,Net-C,unknown (name not descriptive),2025-09-26,2025-09-28
+B-K233,Net-C,video + interactive end-card,2025-09-26,2025-09-28
+B-K234,Net-C,video + interactive end-card,2025-09-26,2025-09-28
+B-K235,Net-C,unknown (name not descriptive),2025-09-26,2025-09-28

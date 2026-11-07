@@ -1,0 +1,9 @@
+id,cell,metric,install_from,install_to,your_prediction,low_80,high_80,method_note
+P1,"Net-A, Android, United States",ROAS D30,2025-09-01,2025-09-14,,,,
+P2,"Net-A, Android, all countries except United States",ROAS D30,2025-09-01,2025-09-14,,,,
+P3,"Net-B, Android, United States",ROAS D30,2025-09-01,2025-09-14,,,,
+P4,"Net-B, iOS, United States",ROAS D30,2025-09-01,2025-09-14,,,,
+P5,"Net-C, Android, United States",ROAS D30,2025-09-01,2025-09-14,,,,
+P6,"Net-D, Android, United States",ROAS D30,2025-09-01,2025-09-14,,,,
+P7,"Net-A, Android, United States",ROAS D60,2025-08-04,2025-08-17,,,,
+P8,"Net-D, Android, United States",ROAS D60,2025-08-04,2025-08-17,,,,

@@ -1,0 +1,33 @@
+creative_id,network,creative_type,first_seen,last_seen
+A-K001,Net-A,display (network auto-assembles video/image/playable),2025-01-06,2025-09-28
+A-K002,Net-A,search text ad,2025-01-06,2025-09-28
+A-K003,Net-A,video (video platform),2025-01-08,2025-09-28
+A-K004,Net-B,set: contents unknown,2025-01-30,2025-03-07
+A-K005,Net-B,set: contents unknown,2025-01-30,2025-03-07
+A-K006,Net-B,unknown (not reported / not descriptive),2025-02-20,2025-02-27
+A-K007,Net-B,set: contents unknown,2025-02-27,2025-03-13
+A-K008,Net-A,search text ad (partner sites),2025-05-15,2025-09-24
+A-K009,Net-B,set: interactive end-card only,2025-05-20,2025-05-31
+A-K010,Net-B,set: playable (+ possibly video),2025-05-20,2025-05-31
+A-K011,Net-B,set: playable (+ possibly video),2025-05-20,2025-05-31
+A-K012,Net-B,set: playable (+ possibly video),2025-05-20,2025-09-28
+A-K013,Net-B,set: playable (+ possibly video),2025-05-20,2025-09-28
+A-K014,Net-B,set: playable (+ possibly video),2025-05-20,2025-09-28
+A-K015,Net-B,set: playable (+ possibly video),2025-05-20,2025-09-28
+A-K016,Net-B,set: playable (+ possibly video),2025-05-30,2025-06-05
+A-K017,Net-B,set: playable (+ possibly video),2025-05-31,2025-09-28
+A-K018,Net-B,set: playable (+ possibly video),2025-07-08,2025-09-28
+A-K019,Net-B,set: playable (+ possibly video),2025-07-08,2025-09-28
+A-K020,Net-B,set: contents unknown,2025-07-17,2025-09-28
+A-K021,Net-C,video + playable,2025-07-26,2025-08-05
+A-K022,Net-C,video + playable,2025-07-26,2025-09-28
+A-K023,Net-C,playable (+ possibly video),2025-07-26,2025-09-28
+A-K024,Net-C,video + playable,2025-07-26,2025-08-05
+A-K025,Net-C,playable (+ possibly video),2025-07-26,2025-09-28
+A-K026,Net-C,video + playable,2025-07-26,2025-08-05
+A-K027,Net-C,video + playable,2025-07-26,2025-09-28
+A-K028,Net-C,playable (+ possibly video),2025-07-26,2025-09-28
+A-K029,Net-D,store image (offer-wall listing),2025-07-31,2025-09-28
+A-K030,Net-C,video + playable,2025-08-05,2025-09-28
+A-K031,Net-C,video + playable,2025-08-05,2025-09-28
+A-K032,Net-C,video + playable,2025-08-05,2025-09-28
