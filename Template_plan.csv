@@ -1,5 +1,0 @@
-game,network,platform,country,baseline_weekly_spend,quarter_spend,share_of_quarter_budget,expected_installs,expected_d120_revenue,expected_d120_roas,expected_1y_revenue,expected_1y_roas,note
-Game A,Net-A,android,us,,,,,,,,,
-Game A,Net-A,android,"(next country, or a named group of small countries)",,,,,,,,,(if a group: list its countries here)
-Game A,(one row per network × platform × country…),,,,,,,,,,,
-Game A,TOTAL,,,,"(≤ 250,000)",100%,,,,,,
