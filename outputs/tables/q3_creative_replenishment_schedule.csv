@@ -1,0 +1,49 @@
+Week,Date_Window,Network,Creative_Unit,Active_Creative_ID,Weekly_Spend,Weekly_Impressions,Creative_Cumulative_Imps,CPI_Inflation_Wearout,Lifecycle_Status,Production_Action_Required
+1,2025-10-06..2025-10-12,Net-A,video_or_playable,Net-A-EXISTING,5670.92,601201,601201,+0.00%,Existing Active,Order Net-A Batch 1 (video_or_playable)
+1,2025-10-06..2025-10-12,Net-B,ad_set,Net-B-EXISTING,2969.53,30322,30322,+0.00%,Existing Active,Order Net-B Batch 1 (ad_set)
+1,2025-10-06..2025-10-12,Net-C,ad_pack,Net-C-EXISTING,667.55,23552,23552,+0.00%,Existing Active,Order Net-C Batch 1 (ad_pack)
+1,2025-10-06..2025-10-12,Net-D,listing_image,Net-D-EXISTING,2391.3,5092,5092,+0.00%,Existing Active,Order Net-D Batch 1 (listing_image)
+2,2025-10-13..2025-10-19,Net-A,video_or_playable,Net-A-EXISTING,5670.92,601201,1202403,+0.00%,Existing Active,In Production
+2,2025-10-13..2025-10-19,Net-B,ad_set,Net-B-EXISTING,2969.53,30322,60643,+0.00%,Existing Active,In Production
+2,2025-10-13..2025-10-19,Net-C,ad_pack,Net-C-EXISTING,667.55,23552,47103,+0.00%,Existing Active,In Production
+2,2025-10-13..2025-10-19,Net-D,listing_image,Net-D-EXISTING,2391.3,5092,10185,+0.00%,Existing Active,In Production
+3,2025-10-20..2025-10-26,Net-A,video_or_playable,Net-A-NEW-01,5670.92,601201,601201,+12.02%,Aging (Lead Time Trigger),Initiate Brief for Net-A-NEW-02
+3,2025-10-20..2025-10-26,Net-B,ad_set,Net-B-NEW-01,2969.53,30322,30322,+9.10%,Healthy / Optimal Pacing,Monitoring IPM & CPI
+3,2025-10-20..2025-10-26,Net-C,ad_pack,Net-C-NEW-01,667.55,23552,23552,+7.07%,Healthy / Optimal Pacing,Monitoring IPM & CPI
+3,2025-10-20..2025-10-26,Net-D,listing_image,Net-D-NEW-01,2391.3,5092,5092,+0.76%,Healthy / Optimal Pacing,Monitoring IPM & CPI
+4,2025-10-27..2025-11-02,Net-A,video_or_playable,Net-A-NEW-01,5670.92,601201,1202403,+24.05%,Retiring Soon (Order Replacement),Trigger Production of Net-A-NEW-02
+4,2025-10-27..2025-11-02,Net-B,ad_set,Net-B-NEW-01,2969.53,30322,60643,+18.19%,Healthy / Optimal Pacing,Monitoring IPM & CPI
+4,2025-10-27..2025-11-02,Net-C,ad_pack,Net-C-NEW-01,667.55,23552,47103,+14.13%,Healthy / Optimal Pacing,Monitoring IPM & CPI
+4,2025-10-27..2025-11-02,Net-D,listing_image,Net-D-NEW-01,2391.3,5092,10185,+1.53%,Healthy / Optimal Pacing,Monitoring IPM & CPI
+5,2025-11-03..2025-11-09,Net-A,video_or_playable,Net-A-NEW-02,5670.92,601201,303604,+6.07%,Aging (Lead Time Trigger),Initiate Brief for Net-A-NEW-03
+5,2025-11-03..2025-11-09,Net-B,ad_set,Net-B-NEW-01,2969.53,30322,90965,+27.29%,Retiring Soon (Order Replacement),Trigger Production of Net-B-NEW-02
+5,2025-11-03..2025-11-09,Net-C,ad_pack,Net-C-NEW-01,667.55,23552,70655,+21.20%,Healthy / Optimal Pacing,Monitoring IPM & CPI
+5,2025-11-03..2025-11-09,Net-D,listing_image,Net-D-NEW-01,2391.3,5092,15277,+2.29%,Healthy / Optimal Pacing,Monitoring IPM & CPI
+6,2025-11-10..2025-11-16,Net-A,video_or_playable,Net-A-NEW-02,5670.92,601201,904805,+18.10%,Retiring Soon (Order Replacement),Trigger Production of Net-A-NEW-03
+6,2025-11-10..2025-11-16,Net-B,ad_set,Net-B-NEW-02,2969.53,30322,21286,+6.39%,Healthy / Optimal Pacing,Monitoring IPM & CPI
+6,2025-11-10..2025-11-16,Net-C,ad_pack,Net-C-NEW-01,667.55,23552,94207,+28.26%,Retiring Soon (Order Replacement),Trigger Production of Net-C-NEW-02
+6,2025-11-10..2025-11-16,Net-D,listing_image,Net-D-NEW-01,2391.3,5092,20370,+3.06%,Healthy / Optimal Pacing,Monitoring IPM & CPI
+7,2025-11-17..2025-11-23,Net-A,video_or_playable,Net-A-NEW-03,5670.92,601201,6006,+0.12%,Healthy / Optimal Pacing,Monitoring IPM & CPI
+7,2025-11-17..2025-11-23,Net-B,ad_set,Net-B-NEW-02,2969.53,30322,51608,+15.48%,Healthy / Optimal Pacing,Monitoring IPM & CPI
+7,2025-11-17..2025-11-23,Net-C,ad_pack,Net-C-NEW-02,667.55,23552,17758,+5.33%,Healthy / Optimal Pacing,Monitoring IPM & CPI
+7,2025-11-17..2025-11-23,Net-D,listing_image,Net-D-NEW-01,2391.3,5092,25462,+3.82%,Healthy / Optimal Pacing,Monitoring IPM & CPI
+8,2025-11-24..2025-11-30,Net-A,video_or_playable,Net-A-NEW-03,5670.92,601201,607208,+12.14%,Aging (Lead Time Trigger),Initiate Brief for Net-A-NEW-04
+8,2025-11-24..2025-11-30,Net-B,ad_set,Net-B-NEW-02,2969.53,30322,81929,+24.58%,Retiring Soon (Order Replacement),Trigger Production of Net-B-NEW-03
+8,2025-11-24..2025-11-30,Net-C,ad_pack,Net-C-NEW-02,667.55,23552,41310,+12.39%,Healthy / Optimal Pacing,Monitoring IPM & CPI
+8,2025-11-24..2025-11-30,Net-D,listing_image,Net-D-NEW-01,2391.3,5092,30554,+4.58%,Healthy / Optimal Pacing,Monitoring IPM & CPI
+9,2025-12-01..2025-12-07,Net-A,video_or_playable,Net-A-NEW-03,5670.92,601201,1208409,+24.17%,Retiring Soon (Order Replacement),Trigger Production of Net-A-NEW-04
+9,2025-12-01..2025-12-07,Net-B,ad_set,Net-B-NEW-03,2969.53,30322,12251,+3.68%,Healthy / Optimal Pacing,Monitoring IPM & CPI
+9,2025-12-01..2025-12-07,Net-C,ad_pack,Net-C-NEW-02,667.55,23552,64862,+19.46%,Healthy / Optimal Pacing,Monitoring IPM & CPI
+9,2025-12-01..2025-12-07,Net-D,listing_image,Net-D-NEW-01,2391.3,5092,35647,+5.35%,Healthy / Optimal Pacing,Monitoring IPM & CPI
+10,2025-12-08..2025-12-14,Net-A,video_or_playable,Net-A-NEW-04,5670.92,601201,309610,+6.19%,Aging (Lead Time Trigger),Initiate Brief for Net-A-NEW-05
+10,2025-12-08..2025-12-14,Net-B,ad_set,Net-B-NEW-03,2969.53,30322,42573,+12.77%,Healthy / Optimal Pacing,Monitoring IPM & CPI
+10,2025-12-08..2025-12-14,Net-C,ad_pack,Net-C-NEW-02,667.55,23552,88413,+26.52%,Retiring Soon (Order Replacement),Trigger Production of Net-C-NEW-03
+10,2025-12-08..2025-12-14,Net-D,listing_image,Net-D-NEW-01,2391.3,5092,40739,+6.11%,Healthy / Optimal Pacing,Monitoring IPM & CPI
+11,2025-12-15..2025-12-21,Net-A,video_or_playable,Net-A-NEW-04,5670.92,601201,910811,+18.22%,Retiring Soon (Order Replacement),Trigger Production of Net-A-NEW-05
+11,2025-12-15..2025-12-21,Net-B,ad_set,Net-B-NEW-03,2969.53,30322,72894,+21.87%,Retiring Soon (Order Replacement),Trigger Production of Net-B-NEW-04
+11,2025-12-15..2025-12-21,Net-C,ad_pack,Net-C-NEW-03,667.55,23552,11965,+3.59%,Healthy / Optimal Pacing,Monitoring IPM & CPI
+11,2025-12-15..2025-12-21,Net-D,listing_image,Net-D-NEW-01,2391.3,5092,45831,+6.87%,Healthy / Optimal Pacing,Monitoring IPM & CPI
+12,2025-12-22..2025-12-28,Net-A,video_or_playable,Net-A-NEW-05,5670.92,601201,12013,+0.24%,Healthy / Optimal Pacing,Monitoring IPM & CPI
+12,2025-12-22..2025-12-28,Net-B,ad_set,Net-B-NEW-04,2969.53,30322,3216,+0.96%,Healthy / Optimal Pacing,Monitoring IPM & CPI
+12,2025-12-22..2025-12-28,Net-C,ad_pack,Net-C-NEW-03,667.55,23552,35516,+10.65%,Healthy / Optimal Pacing,Monitoring IPM & CPI
+12,2025-12-22..2025-12-28,Net-D,listing_image,Net-D-NEW-01,2391.3,5092,50924,+7.64%,Healthy / Optimal Pacing,Monitoring IPM & CPI

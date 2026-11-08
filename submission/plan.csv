@@ -1,5 +1,42 @@
 game,network,platform,country,baseline_weekly_spend,quarter_spend,share_of_quarter_budget,expected_installs,expected_d120_revenue,expected_d120_roas,expected_1y_revenue,expected_1y_roas,note
-Game A,Net-A,android,us,,,,,,,,,
-Game A,Net-A,android,"(next country, or a named group of small countries)",,,,,,,,,(if a group: list its countries here)
-Game A,(one row per network × platform × country…),,,,,,,,,,,
-Game A,TOTAL,,,,"(≤ 250,000)",100%,,,,,,
+Game A,Net-A,android,us,2920.46,31644.54,22.54%,8351.6,26097.43,0.8247,30391.9,0.9604,Core domestic scale line paced at 0.90x; 1-year ROAS 0.99x
+Game A,Net-A,android,jp,453.13,6434.4,4.58%,3857.3,5306.29,0.8247,6216.15,0.9661,Spend scaled to 1.18x baseline; D120 ROAS 0.82x
+Game A,Net-A,android,gb,310.13,5592.64,3.98%,2574.4,4611.83,0.8246,5767.39,1.0312,High-payback market scaled to max 1.50x; D120 ROAS 0.82x
+Game A,Net-A,android,kr,301.34,2402.87,1.71%,855.4,1981.57,0.8247,2299.84,0.9571,Spend scaled to 0.66x baseline; D120 ROAS 0.82x
+Game A,Net-A,android,es,264.95,3002.45,2.14%,6503.2,2475.91,0.8246,2776.68,0.9248,Spend scaled to 0.94x baseline; D120 ROAS 0.82x
+Game A,Net-A,android,de,233.3,2693.86,1.92%,2199.4,2221.68,0.8247,2566.73,0.9528,Spend scaled to 0.96x baseline; D120 ROAS 0.82x
+Game A,Net-A,android,br,187.81,3122.54,2.22%,8178.1,2575.09,0.8247,3019.96,0.9671,Spend scaled to 1.39x baseline; D120 ROAS 0.82x
+Game A,Net-A,android,fr,156.53,1248.84,0.89%,2288.1,1029.95,0.8247,1113.05,0.8913,Spend scaled to 0.66x baseline; D120 ROAS 0.82x
+Game A,Net-A,android,ca,83.34,1372.51,0.98%,604.5,1131.75,0.8246,1241.83,0.9048,Spend scaled to 1.37x baseline; D120 ROAS 0.82x
+Game A,Net-A,android,mx,54.84,1316.16,0.94%,3199.2,1419.29,1.0784,1603.18,1.2181,High-payback market scaled to max 2.00x; D120 ROAS 1.08x
+Game A,Net-A,android,pl,53.4,1254.52,0.89%,2677.1,1034.67,0.8248,1146.94,0.9142,High-payback market scaled to max 1.96x; D120 ROAS 0.82x
+Game A,Net-A,android,au,45.25,286.17,0.20%,114.0,235.95,0.8245,263.73,0.9216,Spend scaled to 0.53x baseline; D120 ROAS 0.82x
+Game A,Net-A,android,gr,44.89,751.02,0.53%,1856.7,619.06,0.8243,965.25,1.2852,Spend scaled to 1.39x baseline; D120 ROAS 0.82x
+Game A,Net-A,android,il,41.76,737.35,0.53%,648.1,608.03,0.8246,713.42,0.9675,High-payback market scaled to max 1.47x; D120 ROAS 0.82x
+Game A,Net-A,android,my,34.72,294.26,0.21%,617.9,242.63,0.8245,284.38,0.9664,Spend scaled to 0.71x baseline; D120 ROAS 0.82x
+Game A,Net-A,android,cl,32.37,413.36,0.29%,959.5,340.58,0.8239,399.09,0.9655,Spend scaled to 1.06x baseline; D120 ROAS 0.82x
+Game A,Net-A,android,tw,30.14,374.63,0.27%,313.4,308.77,0.8242,362.23,0.9669,Spend scaled to 1.04x baseline; D120 ROAS 0.82x
+Game A,Net-A,android,it,29.65,188.84,0.13%,1009.0,155.65,0.8242,171.25,0.9068,Spend scaled to 0.53x baseline; D120 ROAS 0.82x
+Game A,Net-A,android,ph,26.65,192.46,0.14%,689.6,158.69,0.8246,185.99,0.9664,Spend scaled to 0.60x baseline; D120 ROAS 0.82x
+Game A,Net-A,android,th,23.04,162.11,0.12%,403.9,133.58,0.824,156.62,0.9661,Spend scaled to 0.59x baseline; D120 ROAS 0.82x
+Game A,Net-A,android,ro,22.02,528.48,0.38%,1401.4,932.5,1.7645,1073.76,2.0318,High-payback market scaled to max 2.00x; D120 ROAS 1.76x
+Game A,Net-A,android,hu,21.39,230.6,0.16%,809.4,190.0,0.8239,214.72,0.9311,Spend scaled to 0.90x baseline; D120 ROAS 0.82x
+Game A,Net-A,android,ar,20.92,502.08,0.36%,1847.8,436.08,0.8686,510.06,1.0159,High-payback market scaled to max 2.00x; D120 ROAS 0.87x
+Game A,Net-A,android,se,18.73,449.52,0.32%,449.3,481.75,1.0717,555.22,1.2351,High-payback market scaled to max 2.00x; D120 ROAS 1.07x
+Game A,Net-A,android,sa,18.22,109.32,0.08%,209.2,69.07,0.6318,81.04,0.7414,Spend scaled to 0.50x baseline; D120 ROAS 0.63x
+Game A,Net-A,android,vn,17.38,298.87,0.21%,679.3,246.21,0.8238,287.4,0.9616,High-payback market scaled to max 1.43x; D120 ROAS 0.82x
+Game A,Net-A,android,pt,14.94,307.46,0.22%,829.8,253.49,0.8245,297.35,0.9671,High-payback market scaled to max 1.71x; D120 ROAS 0.82x
+Game A,Net-A,android,sk,13.38,80.28,0.06%,228.9,56.64,0.7055,66.47,0.828,Spend scaled to 0.50x baseline; D120 ROAS 0.71x
+Game A,Net-A,android,hk,12.04,288.96,0.21%,217.4,452.1,1.5646,525.59,1.8189,High-payback market scaled to max 2.00x; D120 ROAS 1.56x
+Game A,Net-A,android,at,11.35,68.1,0.05%,112.8,39.85,0.5852,45.59,0.6695,Spend scaled to 0.50x baseline; D120 ROAS 0.59x
+Game A,Net-A,android,nl,11.05,70.6,0.05%,111.4,58.15,0.8237,71.39,1.0111,Spend scaled to 0.53x baseline; D120 ROAS 0.82x
+Game A,Net-A,android,ae,10.6,85.5,0.06%,120.3,70.48,0.8244,82.71,0.9673,Spend scaled to 0.67x baseline; D120 ROAS 0.82x
+Game A,Net-A,android,Tier1_Other_West_Affluent,36.98,749.16,0.53%,1417.1,617.86,0.8247,654.88,0.8742,"Tier group: ch,be,ie,no,dk,nz,fi,sg,lu,is,mt,cy,pr,je,gg,im,gi"
+Game A,Net-A,android,Tier2_Other_EastAsia_GCC,4.63,27.78,0.02%,59.8,19.31,0.695,22.26,0.8013,"Tier group: kw,qa,om,bh,bn,mo"
+Game A,Net-A,android,Tier3_Other_LatAm_EastEU,34.0,601.29,0.43%,2017.1,495.8,0.8246,538.33,0.8953,"Tier group: co,pe,cz,bg,hr,si,ee,lv,lt,rs,ec,cr,uy,pa,do,gt,sv,bo,py,mk,ba,al,ge,am,md,by"
+Game A,Net-A,android,Tier4_RoW_Emerging,6.98,167.52,0.12%,3141.2,138.43,0.8264,231.76,1.3835,"Tier group: id,pk,bd,ng,eg,za,ke,gh,dz,ma,tn,iq,jo,lb,lk,np,kh,mm,la,uz,kz,az,zz"
+Game A,Net-B,android,us,2011.32,21909.89,15.61%,2632.6,19574.85,0.8934,21504.91,0.9815,Spend scaled to 0.91x baseline; D120 ROAS 0.89x
+Game A,Net-B,ios,us,1697.89,13724.52,9.78%,3183.1,12261.76,0.8934,13430.48,0.9786,Spend scaled to 0.67x baseline; D120 ROAS 0.89x
+Game A,Net-C,android,us,1099.61,8010.59,5.71%,3630.5,7807.49,0.9746,9966.67,1.2442,Spend scaled to 0.61x baseline; D120 ROAS 0.97x
+Game A,Net-D,android,us,4782.59,28695.54,20.44%,4556.1,43501.37,1.516,46266.7,1.6123,Top-performing offerwall line scaled to 0.50x; pays back in 120d
+Game A,TOTAL,,,15193.72,140391.59,100.00%,75554.7,140391.61,1.0,158072.89,1.1259,Primary CFO-compliant plan: maximum spend strictly satisfying CFO D120 ROAS >= 1.00 mandate. See q2_budget_sensitivity_frontier.csv for CEO $250k growth option.
