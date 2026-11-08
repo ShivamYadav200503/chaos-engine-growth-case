@@ -1,0 +1,29 @@
+game,network,platform,country_cell,cell_type,baseline_weekly_spend,all_time_spend,all_time_mmp_installs,baseline_cpi,all_time_cpi,observed_d7_roas_clean,observed_d30_roas_clean,observed_d30_roas_raw,d30_roas_distortion_pct,status,note
+Game B,Net-A,android,au,Market Cell,0.0,1386.09,323,,4.291,0.2884,0.4517,0.4849,7.3,Paused on 2025-07-10,Last spend: 2025-07-10
+Game B,Net-A,android,br,Market Cell,0.0,3713.18,5317,,0.698,0.3406,0.4935,0.4965,0.6,Paused on 2025-07-10,Last spend: 2025-07-10
+Game B,Net-A,android,ca,Market Cell,0.0,8012.52,1486,,5.392,0.1886,0.3038,0.3044,0.2,Paused on 2025-07-10,Last spend: 2025-07-10
+Game B,Net-A,android,gb,Market Cell,0.0,3078.0,814,,3.781,0.222,0.311,0.3252,4.6,Paused on 2025-07-10,Last spend: 2025-07-10
+Game B,Net-A,android,nz,Market Cell,0.0,770.4,192,,4.012,0.2204,0.2911,0.2978,2.3,Paused on 2025-07-10,Last spend: 2025-07-10
+Game B,Net-A,android,ph,Market Cell,0.0,1838.57,2095,,0.878,0.193,0.2692,0.2692,0.0,Paused on 2025-07-10,Last spend: 2025-07-10
+Game B,Net-A,android,us,Market Cell,1638.11,136382.19,22118,5.424,6.166,0.2723,0.4524,0.4538,0.3,Active,Last spend: 2025-09-28
+Game B,Net-A,android,TOTAL,Network Line Total,1638.11,155180.95,32345,5.424,4.798,0.2675,0.4394,0.4413,0.4,Active,Full line; last spend: 2025-09-28
+Game B,Net-B,android,ca,Market Cell,0.0,3779.43,751,,5.033,0.2115,0.3143,0.3143,0.0,Paused on 2025-04-02,Last spend: 2025-04-02
+Game B,Net-B,android,gb,Market Cell,0.0,2915.14,940,,3.101,0.1599,0.2387,0.2387,0.0,Paused on 2025-03-27,Last spend: 2025-03-27
+Game B,Net-B,android,us,Market Cell,0.0,146519.33,26570,,5.514,0.2997,0.4973,0.4976,0.0,Paused on 2025-08-20,Last spend: 2025-08-20
+Game B,Net-B,android,TOTAL,Network Line Total,0.0,153213.91,28261,,5.421,0.2949,0.4879,0.4881,0.0,Paused on 2025-08-20,Full line; last spend: 2025-08-20
+Game B,Net-B,ios,ca,Market Cell,0.0,10297.06,2246,,4.585,0.2013,0.267,0.267,0.0,Paused on 2025-04-02,Last spend: 2025-04-02
+Game B,Net-B,ios,us,Market Cell,79.17,125579.5,28289,4.113,4.439,0.3213,0.4784,0.481,0.5,Active,Last spend: 2025-09-06
+Game B,Net-B,ios,TOTAL,Network Line Total,79.17,135876.56,30535,4.113,4.45,0.3122,0.4624,0.4647,0.5,Active,Full line; last spend: 2025-09-06
+Game B,Net-C,android,ph,Market Cell,192.94,771.76,1991,0.388,0.388,0.0473,,,,Active,Last spend: 2025-09-28
+Game B,Net-C,android,us,Market Cell,680.62,80093.03,13837,3.98,5.788,0.2809,0.4229,0.4229,0.0,Active,Last spend: 2025-09-28
+Game B,Net-C,android,TOTAL,Network Line Total,873.56,80864.79,15828,1.306,5.109,0.2792,0.4229,0.4229,0.0,Active,Full line; last spend: 2025-09-28
+Game B,Net-C,ios,us,Market Cell,3857.52,80113.84,16656,4.726,4.81,0.3356,0.4713,0.4858,3.1,Active,Last spend: 2025-09-28
+Game B,Net-C,ios,TOTAL,Network Line Total,3857.52,80113.84,16656,4.726,4.81,0.3356,0.4713,0.4858,3.1,Active,Full line; last spend: 2025-09-28
+Game B,Net-D,android,us,Market Cell,3800.23,37501.91,9115,3.659,4.114,0.3983,0.3357,0.3357,0.0,Active,Last spend: 2025-09-28
+Game B,Net-D,android,TOTAL,Network Line Total,3800.23,37501.91,9115,3.659,4.114,0.3983,0.3357,0.3357,0.0,Active,Full line; last spend: 2025-09-28
+Game B,Net-E,android,us,Market Cell,0.0,25733.51,13924,,1.848,0.3716,0.4826,0.4826,0.0,Paused on 2025-05-28,Last spend: 2025-05-28
+Game B,Net-E,android,TOTAL,Network Line Total,0.0,25733.51,13924,,1.848,0.3716,0.4826,0.4826,0.0,Paused on 2025-05-28,Full line; last spend: 2025-05-28
+Game B,Net-F,ios,gb,Market Cell,0.0,58.01,0,,,0.0,0.0,0.0,,Paused on 2025-03-25,Last spend: 2025-03-25
+Game B,Net-F,ios,us,Market Cell,0.0,1431.86,0,,,0.0,0.0,0.0,,Paused on 2025-03-31,Last spend: 2025-03-31
+Game B,Net-F,ios,TOTAL,Network Line Total,0.0,1489.87,0,,,0.0,0.0,0.0,,Paused on 2025-03-31,Full line; last spend: 2025-03-31
+Game B,ALL_PAID,mobile,TOTAL,Grand Total,10248.6,669975.34,146664,3.603,4.568,0.3028,0.4545,0.457,0.6,Active,Total mobile paid UA in Game B
