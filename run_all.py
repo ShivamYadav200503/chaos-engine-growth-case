@@ -14,6 +14,7 @@ SCRIPTS = [
     "src/03_spend_optimizer_q2.py",
     "src/04_creative_wearout_q3.py",
     "src/05_generate_tables_figs.py",
+    "src/06_compile_pdfs_and_package.py",
 ]
 
 def run_step(script_path: str):

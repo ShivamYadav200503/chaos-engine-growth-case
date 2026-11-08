@@ -11,7 +11,7 @@ chaos-engine-growth-case/
 ├── README.md                        # Exact 1-command reproduction instructions & environment setup
 ├── requirements.txt                 # Locked Python dependencies (pandas, numpy, scipy, statsmodels, matplotlib)
 ├── .gitignore                       # Ignores __pycache__, .DS_Store, .venv, and temporary build artifacts
-├── run_all.py                       # Master orchestrator script: runs scripts 01 -> 05 in sequence
+├── run_all.py                       # Master orchestrator script: runs scripts 01 -> 06 in sequence
 │
 ├── data/
 │   ├── raw/                         # Unmodified original files from Growth_Assignment_Pack.zip
@@ -38,7 +38,8 @@ chaos-engine-growth-case/
 │   ├── 02_ltv_roas_modeling.py      # Q1 Part B: Dual-stream (Ad + IAP) survival/EB LTV model, 4-way transfer, P1-P8
 │   ├── 03_spend_optimizer_q2.py     # Q2: Organic uplift econometrics + constrained non-linear spend optimizer
 │   ├── 04_creative_wearout_q3.py    # Q3: Creative IPM vs. LTV decomposition + fatigue & replenishment schedule
-│   └── 05_generate_tables_figs.py   # Exports all publication-ready tables and figures for Memo & Appendix
+│   ├── 05_generate_tables_figs.py   # Exports all publication-ready tables and figures for Memo & Appendix
+│   └── 06_compile_pdfs_and_package.py # Compiles memo.pdf, appendix.pdf, ai_usage_log.pdf and creates submission zip
 │
 ├── outputs/
 │   ├── tables/                      # Generated CSV/Markdown tables for Appendix (data bugs, cell values, 4-way transfer)

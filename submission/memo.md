@@ -51,16 +51,18 @@ Therefore, **we recommend committing $140,391.59 immediately to guarantee 100% c
 
 ---
 
-### 2. Network & Line Portfolio Allocation (The 5 Mandatory Lines)
+### 2. Network & Line Portfolio Allocation (The 5 Mandatory Lines & KKT Economics)
 
-All 5 mandatory active lines are maintained at or above their 40% spend floor over the 12-week quarter:
+All 5 mandatory active lines are maintained at or above their 40% spend floor over the 12-week quarter, governed by Karush-Kuhn-Tucker (KKT) first-order optimality conditions:
 
 1. **Net-A Android ($68,051.05 total spend; 101.2% of baseline; 48.47% budget share):**
    - **United States:** Core domestic baseline paced at 0.50x spend ($17,522.76) to protect payback (D120 ROAS: 0.963x, 1Y ROAS: 1.121x).
    - **High-Payback Direct Outperformers (Scaled to 2.0x ceiling):** Romania (2.41x D120 ROAS), Hong Kong (2.14x), Mexico (1.47x), Sweden (1.46x), Argentina (1.19x), Poland (1.12x), Portugal (1.07x), Israel (1.01x), Vietnam (1.00x), and United Kingdom (1.02x).
    - **Regional Tiers:** Tiers 1, 3, and 4 scaled to 2.0x (D120 ROAS 1.01x–1.13x), aggregating affluent European and emerging mobile markets with favorable CPM/CPI ratios. Tier 2 (GCC & East Asia) pruned due to poor baseline return (0.584x).
+   - **Counter-Intuitive CPI vs. ROAS Allocation (The "Cheap-CPI Trap"):** Budget multiples are dictated strictly by marginal net margin, not raw CPI. Higher-CPI markets like `GB` ($1.84 CPI) and `SE` ($0.79 CPI) receive maximum **2.0x budget multiples** because their strong LTV delivers >1.00x D120 payback. Conversely, nominal "cheap-CPI" traps like `IT` ($0.20 CPI), `PH` ($0.30 CPI), and `SA` ($0.58 CPI) are pruned or zeroed because poor player monetization yields sub-0.75x ROAS (e.g., SA D120 ROAS is only 0.531x).
 2. **Net-D Android US ($28,695.54 spend; 50.0% of baseline; 20.44% budget share):**
-   - Top-performing offerwall channel. Paced at 0.50x baseline ($2,391.30/week) to capture strong marginal efficiency ($0.50^{-0.65} = 1.57\times$ scaling gain, delivering **1.516x D120 ROAS** after holiday shock).
+   - Top-performing offerwall channel. Paced at exactly 0.50x baseline ($2,391.30/week) to capture its maximum **+56.9% efficiency boost** ($0.50^{-0.65} = 1.5692\times$, delivering **1.516x D120 ROAS** after holiday shock and generating **+$14,801 in net D120 cash surplus**).
+   - *Why Net-D is held at 50.0% while Net-B Android is at 90.8% ($21,915 spend):* Due to Net-D's aggressive diminishing returns exponent ($k=0.65$ vs $k=0.40$ on Net-B), spending beyond 0.50x causes Net-D's marginal D120 revenue to drop immediately to **$0.531 per dollar**—just below the **$0.536 marginal revenue** where Net-B Android (90.8%), Net-B iOS (67.4%), and Net-C Android (60.7%) equilibrate under KKT shadow-price conditions. Reallocating that marginal capital to Net-B and Net-C maximizes total portfolio revenue.
 3. **Net-B Android US ($21,911.59 spend; 90.8% of baseline; 15.61% budget share):**
    - Mainstream video/social engine. Maintained at 0.91x spend ($1,825.97/week) delivering 0.954x D120 ROAS and 1.048x 1-Year cash payback.
 4. **Net-B iOS US ($13,725.20 spend; 67.4% of baseline; 9.78% budget share):**
@@ -84,11 +86,11 @@ Using daily time-series regression with day-of-week fixed effects and time trend
 
 To counter aggressive creative wearout and survive the November 24 – December 21 holiday shock (+25% CPI), creative production must adhere to a deterministic 12-week schedule:
 - **Existing Asset Carryover:** Existing creative packs carry **Weeks 1–2 (Oct 6 – Oct 19)** without new production spend.
-- **Weeks 3–12 Replenishment Volume (13 New Units Total):**
-  - **Net-A (5 Videos/Playables):** Max 1.5M imps/unit (+20% CPI / 1M imps). 2-week production lead time. Launches: W3, W5, W7, W10, W12.
-  - **Net-B (4 Ad Sets, Shared Across Android & iOS):** Max 100k imps/unit (+300% CPI / 1M imps). 1-week lead time. Launches: W3, W6, W9, W12.
+- **Weeks 3–12 Replenishment Volume (13 New Units Total Recommended):**
+  - **Net-A (5 Videos/Playables):** Max 1.5M imps/unit (+20% CPI / 1M imps). 2-week production lead time. Launches: W3, W5, W7, W10, W12. *Format Mechanics Note:* While Net-A Search Text Ads achieve the highest standalone D30 ROAS (1.54x), Net-A operates as an auto-assembled multi-asset ecosystem where video and playable components drive 88% of volume and lower network-wide blended CPI; thus, production focuses on 5 fresh video/playable units while search text copy is refreshed in-house alongside them.
+  - **Net-B (3 Minimum vs. 4 Recommended Ad Sets, Shared Android+iOS):** Delivering 293.3k impressions across Weeks 3–12 requires a strict mathematical minimum of $\lceil 293,271 / 100,000 \rceil = 3$ shared ad sets. However, **we recommend producing 4 ad sets** (launches: W3, W6, W9, W12) to provide a 1-set staggered operational buffer ensuring neither Android nor iOS crosses the +30% CPI fatigue ceiling during the peak November 24 – December 21 holiday surge (+300% CPI / 1M imps; 1-week lead time).
   - **Net-C (3 Ad Packs):** Max 100k imps/unit (+300% CPI / 1M imps). 1-week lead time. Launches: W3, W7, W11.
-  - **Net-D (1 Store Listing Image):** Max 200k imps/unit (+150% CPI / 1M imps). 1-week lead time. Burns only 50.9k imps (25.5% capacity), lasting the entire quarter.
+  - **Net-D (1 Store Listing Image):** Max 200k imps/unit (+150% CPI / 1M imps). 1-week lead time. Burns only 50.9k imps (25.5% capacity), lasting the entire quarter at only +7.6% wear.
 - **Production Triggers:** Creative briefs must be issued on **October 6 (Week 1)** for Net-A Video 1 and on **October 13 (Week 2)** for Net-B/C/D batches.
 
 ---

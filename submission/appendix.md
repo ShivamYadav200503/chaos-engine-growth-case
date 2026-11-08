@@ -129,8 +129,11 @@ subject to:
    where $k_{\text{Net-A}} = 0.35$, $k_{\text{Net-B}} = 0.40$, $k_{\text{Net-C}} = 0.45$, $k_{\text{Net-D}} = 0.65$.
 6. Holiday Shock: $\text{HOLIDAY\_FACTOR} = \frac{8}{12} \cdot 1.0 + \frac{4}{12} \cdot \frac{1}{1.25} = \frac{11.2}{12.0} \approx 0.933333$.
 
-### Key Findings:
+### Key Findings & Karush-Kuhn-Tucker (KKT) Economics:
 - **CFO Breakeven Ceiling:** Direct paid spend is capped at **$140,391.59** to satisfy 1.0000x D120 payback.
+- **KKT Shadow Price Equilibrations ($\lambda \approx 0.536$):**
+  - *Why Net-D Android US is held at 50.0% ($28,696 spend) while Net-B Android US is at 90.8% ($21,912 spend):* Below 0.50x spend, Net-D captures its maximum allowable scaling efficiency gain ($0.50^{-0.65} = 1.5692\times$, achieving **1.516x D120 ROAS** after holiday shock and producing **+$14,801 in net D120 cash profit**). However, beyond 0.50x, Net-D's high diminishing returns exponent ($k=0.65$ vs $k=0.40$ on Net-B) drops its marginal D120 revenue to **$0.531 per dollar spent**. This falls strictly below the **$0.536 marginal revenue** where Net-B Android (90.8%), Net-B iOS (67.4%), and Net-C Android (60.7%) equilibrate under KKT optimality conditions. Capital allocated beyond 0.50x on Net-D produces less revenue than deploying it on Net-B and Net-C.
+  - *Counter-Intuitive Budget Allocation (The "Cheap-CPI Trap"):* Portfolio optimization allocates capital to maximize net margin ($\text{LTV} - \text{CPI}$), not minimize gross CPI. Consequently, higher-CPI cells like `Net-A GB` ($1.84 CPI) and `SE` ($0.79 CPI) receive maximum **2.0x budget multipliers** because their strong monetization delivers >1.00x D120 payback. In contrast, superficial "cheap-CPI" traps like `IT` ($0.20 CPI), `PH` ($0.30 CPI), and `SA` ($0.58 CPI) are pruned to zero because their weak player monetization fails to return capital (e.g., SA D120 ROAS is only 0.531x).
 - **Organic Uplift Catalyst:** Econometric OLS confirms an organic K-factor of **+0.0485** ($t=3.815, p < 0.001$), generating +$0.0995 D120 revenue per paid install. Crediting this halo expands the CFO breakeven ceiling to **$158,000.00**.
 - **CEO Scale Option:** The full $250,000 budget deploys 107,957 installs at 0.7666x D120 ROAS ($191.7k rev) and 0.8657x 1Y ROAS ($216.4k rev).
 
@@ -147,17 +150,18 @@ Refer to:
 ## 6. Creative Fatigue Mechanics & Replenishment Scheduling (Question 3)
 
 ### Wear-Out Rules & Asset Capacities:
-- **Net-A (Videos & Playables):** +20% CPI / 1M imps; max capacity = 1,500,000 impressions before +30% retirement ceiling. 2-week production lead time.
+- **Net-A (Videos & Playables):** +20% CPI / 1M imps; max capacity = 1,500,000 impressions before +30% retirement ceiling. 2-week production lead time. *Format Mechanics:* While Net-A Search Text Ads deliver the highest standalone D30 ROAS (1.54x), Net-A operates as an auto-assembled multi-asset network where video and playable components drive 88% of volume and lower network-wide blended CPI; thus, production focuses on 5 fresh video/playable units while search text copy is refreshed in-house alongside them.
 - **Net-B (Ad Sets, Shared Android + iOS):** +300% CPI / 1M imps; max capacity = 100,000 impressions. 1-week lead time.
 - **Net-C (Ad Packs):** +300% CPI / 1M imps; max capacity = 100,000 impressions. 1-week lead time.
 - **Net-D (Store Listing Images):** +150% CPI / 1M imps; max capacity = 200,000 impressions. 1-week lead time.
 
-### Operational Production Schedule (13 New Units Total):
+### Operational Production Schedule (3 Minimum vs. 4 Recommended Net-B Ad Sets; 13 New Units Total):
 - **Weeks 1–2 (Oct 6 – Oct 19):** Carried entirely by existing creative library.
 - **Weeks 3–12 (Oct 20 – Dec 28):**
-  - **Net-A:** 5 new videos/playables launched at Weeks 3, 5, 7, 10, 12.
-  - **Net-B:** 4 new ad sets launched at Weeks 3, 6, 9, 12.
-  - **Net-C:** 3 new ad packs launched at Weeks 3, 7, 11.
+  - **Net-A:** 5 new videos/playables launched at Weeks 3, 5, 7, 10, 12 (serving ~1.5M imps each).
+  - **Net-B (3 Minimum vs 4 Recommended Units):** Generating 293.3k impressions across Weeks 3–12 requires a theoretical minimum of $\lceil 293,271 / 100,000 \rceil = 3$ shared ad sets. However, **we recommend 4 ad sets** (launches: W3, W6, W9, W12) to establish a 1-set staggered operational buffer ensuring neither Android nor iOS crosses +30% CPI during the peak holiday surge.
+  - **Net-C:** 3 new ad packs launched at Weeks 3, 7, 11 (serving ~100k imps each).
+  - **Net-D:** 1 new store listing image (burns only 50.9k imps of its 200k capacity, enduring the full quarter at only +7.6% wear).
   - **Net-D:** 1 new store listing image (endures all 10 weeks at only +7.6% wear).
 
 Refer to:
