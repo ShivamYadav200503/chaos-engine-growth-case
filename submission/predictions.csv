@@ -1,9 +1,9 @@
 id,cell,metric,install_from,install_to,your_prediction,low_80,high_80,method_note
-P1,"Net-A, Android, United States",ROAS D30,2025-09-01,2025-09-14,0.5626,0.5349,0.5903,Conditioned on realized Sep 30 banked revenue (age 16-29d); power-law elapsed tail & calibrated 80% CI
-P2,"Net-A, Android, all countries except United States",ROAS D30,2025-09-01,2025-09-14,0.8573,0.8206,0.8941,Aggregate non-US 116-country cell; conditioned on realized Sep 30 banked revenue; power-law elapsed tail
-P3,"Net-B, Android, United States",ROAS D30,2025-09-01,2025-09-14,0.7618,0.7087,0.8149,Core line conditioned on realized Sep 30 banked revenue (age 16-29d); power-law elapsed tail
-P4,"Net-B, iOS, United States",ROAS D30,2025-09-01,2025-09-14,0.4312,0.4117,0.4507,iOS core line conditioned on realized Sep 30 banked revenue (age 16-29d); power-law elapsed tail
-P5,"Net-C, Android, United States",ROAS D30,2025-09-01,2025-09-14,0.5543,0.5109,0.5978,Ad-heavy core line conditioned on realized Sep 30 banked revenue (age 16-29d); power-law elapsed tail
-P6,"Net-D, Android, United States",ROAS D30,2025-09-01,2025-09-14,0.5788,0.5629,0.5946,Offerwall dual-stream model conditioned on realized Sep 30 banked revenue; power-law elapsed tail
-P7,"Net-A, Android, United States",ROAS D60,2025-08-04,2025-08-17,0.9879,0.9535,1.0223,"Conditioned on realized Sep 30 banked revenue (age 44-57d, ROAS=0.9306); power-law remaining tail to D60"
-P8,"Net-D, Android, United States",ROAS D60,2025-08-04,2025-08-17,0.7887,0.7795,0.798,"Offerwall conditioned on realized Sep 30 banked revenue (age 44-57d, ROAS=0.7734); mature tail to D60"
+P1,"Net-A, Android, United States",ROAS D30,2025-09-01,2025-09-14,0.5626,0.5349,0.5903,"Conditioned on D14 (0.4652) + realized Sep 30 banked rev (age 16-29d, 0.5164); power-law elapsed tail completion & calibrated 80% CI"
+P2,"Net-A, Android, all countries except United States",ROAS D30,2025-09-01,2025-09-14,0.8573,0.8206,0.8941,Aggregate non-US 116-country cell; conditioned on D14 (0.7058) + realized Sep 30 banked rev (0.7961); power-law tail completion
+P3,"Net-B, Android, United States",ROAS D30,2025-09-01,2025-09-14,0.7618,0.7087,0.8149,"Core line conditioned on D14 (0.5983) + realized Sep 30 banked rev (age 16-29d, 0.6732); power-law elapsed tail completion"
+P4,"Net-B, iOS, United States",ROAS D30,2025-09-01,2025-09-14,0.4312,0.4117,0.4507,"iOS core line conditioned on D14 (0.3864) + realized Sep 30 banked rev (age 16-29d, 0.3988); power-law elapsed tail completion"
+P5,"Net-C, Android, United States",ROAS D30,2025-09-01,2025-09-14,0.5543,0.5109,0.5978,"Ad-heavy core line conditioned on D14 (0.4001) + realized Sep 30 banked rev (age 16-29d, 0.4819); power-law elapsed tail completion"
+P6,"Net-D, Android, United States",ROAS D30,2025-09-01,2025-09-14,0.5788,0.5629,0.5946,Offerwall conditioned on D14 (0.5180) + realized Sep 30 banked rev (0.5524); front-loaded IAP pacing & power-law elapsed tail completion
+P7,"Net-A, Android, United States",ROAS D60,2025-08-04,2025-08-17,0.9879,0.9535,1.0223,"Conditioned on D30 (0.7700) + realized Sep 30 banked rev (age 44-57d, 0.9306); power-law remaining tail to D60 & calibrated 80% CI"
+P8,"Net-D, Android, United States",ROAS D60,2025-08-04,2025-08-17,0.7887,0.7795,0.798,"Offerwall conditioned on D30 (0.7205) + realized Sep 30 banked rev (age 44-57d, 0.7734); mature tail to D60 & calibrated 80% CI"

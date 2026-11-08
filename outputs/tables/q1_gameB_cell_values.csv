@@ -1,0 +1,20 @@
+game,network,platform,country_cell,baseline_weekly_spend,baseline_cpi,historical_cpi,observed_d7_roas,observed_d30_roas,predicted_d120_roas,baseline_pred_d120_ltv,historical_d120_ltv,predicted_1y_roas,baseline_pred_1y_ltv,payback_classification,status,note
+Game B,Net-A,android,au,0.0,,4.291,0.2884,0.4517,0.6305,2.706,2.168,0.7668,3.291,Does not pay back within 1 year,Paused on 2025-07-10,Last spend: 2025-07-10
+Game B,Net-A,android,br,0.0,,0.698,0.3406,0.4935,0.5966,0.417,0.378,0.7041,0.492,Does not pay back within 1 year,Paused on 2025-07-10,Last spend: 2025-07-10
+Game B,Net-A,android,ca,0.0,,5.392,0.1886,0.3038,0.4236,2.284,2.216,0.4927,2.657,Does not pay back within 1 year,Paused on 2025-07-10,Last spend: 2025-07-10
+Game B,Net-A,android,gb,0.0,,3.781,0.222,0.311,0.3963,1.499,1.274,0.4364,1.65,Does not pay back within 1 year,Paused on 2025-07-10,Last spend: 2025-07-10
+Game B,Net-A,android,nz,0.0,,4.012,0.2204,0.2911,0.3461,1.389,1.416,0.4209,1.689,Does not pay back within 1 year,Paused on 2025-07-10,Last spend: 2025-07-10
+Game B,Net-A,android,ph,0.0,,0.878,0.193,0.2692,0.3121,0.274,0.349,0.3754,0.329,Does not pay back within 1 year,Paused on 2025-07-10,Last spend: 2025-07-10
+Game B,Net-A,android,us,1638.11,5.424,6.166,0.2723,0.4524,0.6888,3.736,4.152,0.8402,4.557,Does not pay back within 1 year,Active,Last spend: 2025-09-28
+Game B,Net-B,android,ca,0.0,,5.033,0.2115,0.3143,0.4256,2.142,2.035,0.5197,2.615,Does not pay back within 1 year,Paused on 2025-04-02,Last spend: 2025-04-02
+Game B,Net-B,android,gb,0.0,,3.101,0.1599,0.2387,0.33,1.023,0.989,0.4047,1.255,Does not pay back within 1 year,Paused on 2025-03-27,Last spend: 2025-03-27
+Game B,Net-B,android,us,0.0,,5.514,0.2997,0.4973,0.7047,3.886,4.217,0.873,4.814,Does not pay back within 1 year,Paused on 2025-08-20,Last spend: 2025-08-20
+Game B,Net-B,ios,ca,0.0,,4.585,0.2013,0.267,0.3496,1.603,1.493,0.4511,2.068,Does not pay back within 1 year,Paused on 2025-04-02,Last spend: 2025-04-02
+Game B,Net-B,ios,us,79.17,4.113,4.439,0.3213,0.4784,0.7071,2.908,3.027,0.9369,3.853,Does not pay back within 1 year,Active,Last spend: 2025-09-06
+Game B,Net-C,android,ph,192.94,0.388,0.388,0.0473,,0.0633,0.025,,0.0801,0.031,Does not pay back within 1 year,Active,Last spend: 2025-09-28
+Game B,Net-C,android,us,680.62,3.98,5.788,0.2809,0.4229,0.5992,2.385,3.554,0.7701,3.065,Does not pay back within 1 year,Active,Last spend: 2025-09-28
+Game B,Net-C,ios,us,3857.52,4.726,4.81,0.3356,0.4713,0.6677,3.156,2.55,0.8582,4.056,Does not pay back within 1 year,Active,Last spend: 2025-09-28
+Game B,Net-D,android,us,3800.23,3.659,4.114,0.3983,0.3357,0.4734,1.732,,0.5322,1.947,Does not pay back within 1 year,Active,Last spend: 2025-09-28
+Game B,Net-E,android,us,0.0,,1.848,0.3716,0.4826,0.5067,0.936,0.936,0.6056,1.119,Does not pay back within 1 year,Paused on 2025-05-28,Last spend: 2025-05-28
+Game B,Net-F,ios,gb,0.0,,,0.0,0.0,0.0,,,0.0,,Does not pay back within 1 year,Paused on 2025-03-25,Last spend: 2025-03-25
+Game B,Net-F,ios,us,0.0,,,0.0,0.0,0.0,,,0.0,,Does not pay back within 1 year,Paused on 2025-03-31,Last spend: 2025-03-31
