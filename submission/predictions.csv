@@ -1,9 +1,9 @@
 id,cell,metric,install_from,install_to,your_prediction,low_80,high_80,method_note
-P1,"Net-A, Android, United States",ROAS D30,2025-09-01,2025-09-14,0.5888,0.5833,0.5953,"Dual-stream empirical Bayes link ratio (obs D14 -> D30); 1,000-draw bootstrap CI"
-P2,"Net-A, Android, all countries except United States",ROAS D30,2025-09-01,2025-09-14,0.889,0.8692,0.8936,Aggregate non-US 116-country cell; install-weighted link ratio (obs D14 -> D30); bootstrap CI
-P3,"Net-B, Android, United States",ROAS D30,2025-09-01,2025-09-14,0.7871,0.7685,0.8029,Core line empirical Bayes link ratio (obs D14 -> D30); bootstrap CI
-P4,"Net-B, iOS, United States",ROAS D30,2025-09-01,2025-09-14,0.5003,0.4911,0.5098,iOS core line empirical Bayes link ratio (obs D14 -> D30); bootstrap CI
-P5,"Net-C, Android, United States",ROAS D30,2025-09-01,2025-09-14,0.5394,0.5195,0.5599,Ad-heavy core line empirical Bayes link ratio (obs D14 -> D30); bootstrap CI
-P6,"Net-D, Android, United States",ROAS D30,2025-09-01,2025-09-14,0.5869,0.5773,0.5976,Offerwall dual-stream model preserving front-loaded IAP dynamics; bootstrap CI
-P7,"Net-A, Android, United States",ROAS D60,2025-08-04,2025-08-17,0.9228,0.913,0.9346,"Empirical Bayes link ratio from mature D30 -> D60; 1,000-draw bootstrap CI"
-P8,"Net-D, Android, United States",ROAS D60,2025-08-04,2025-08-17,0.7409,0.7253,0.751,Offerwall channel with flat post-D30 IAP (+0.8%) & mature ad link ratio; bootstrap CI
+P1,"Net-A, Android, United States",ROAS D30,2025-09-01,2025-09-14,0.5626,0.5349,0.5903,Conditioned on realized Sep 30 banked revenue (age 16-29d); power-law elapsed tail & calibrated 80% CI
+P2,"Net-A, Android, all countries except United States",ROAS D30,2025-09-01,2025-09-14,0.8573,0.8206,0.8941,Aggregate non-US 116-country cell; conditioned on realized Sep 30 banked revenue; power-law elapsed tail
+P3,"Net-B, Android, United States",ROAS D30,2025-09-01,2025-09-14,0.7618,0.7087,0.8149,Core line conditioned on realized Sep 30 banked revenue (age 16-29d); power-law elapsed tail
+P4,"Net-B, iOS, United States",ROAS D30,2025-09-01,2025-09-14,0.4312,0.4117,0.4507,iOS core line conditioned on realized Sep 30 banked revenue (age 16-29d); power-law elapsed tail
+P5,"Net-C, Android, United States",ROAS D30,2025-09-01,2025-09-14,0.5543,0.5109,0.5978,Ad-heavy core line conditioned on realized Sep 30 banked revenue (age 16-29d); power-law elapsed tail
+P6,"Net-D, Android, United States",ROAS D30,2025-09-01,2025-09-14,0.5788,0.5629,0.5946,Offerwall dual-stream model conditioned on realized Sep 30 banked revenue; power-law elapsed tail
+P7,"Net-A, Android, United States",ROAS D60,2025-08-04,2025-08-17,0.9879,0.9535,1.0223,"Conditioned on realized Sep 30 banked revenue (age 44-57d, ROAS=0.9306); power-law remaining tail to D60"
+P8,"Net-D, Android, United States",ROAS D60,2025-08-04,2025-08-17,0.7887,0.7795,0.798,"Offerwall conditioned on realized Sep 30 banked revenue (age 44-57d, ROAS=0.7734); mature tail to D60"

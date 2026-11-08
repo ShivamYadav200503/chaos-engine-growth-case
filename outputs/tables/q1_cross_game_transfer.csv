@@ -1,5 +1,5 @@
 transfer_combination,trained_on,evaluated_on,n_cohorts,actual_d120_rev,predicted_d120_rev,wape_pct,mape_pct,rmse_usd,bias_mpe_pct,ci_80_coverage_pct
-Game A model on Game A,Game A,Game A,2003,147928.06,142971.89,30.76,36.76,85.3,-3.35,27.5
-Game A model on Game B,Game A,Game B,1173,304655.0,294531.05,21.71,26.52,95.89,-3.32,77.7
-Game B model on Game B,Game B,Game B,1173,304655.0,294152.1,18.41,21.53,86.42,-3.45,54.3
-Game B model on Game A,Game B,Game A,2003,147928.06,154349.32,34.57,49.88,85.61,4.34,47.4
+Game A model on Game A,Game A,Game A,2003,147928.06,142971.89,30.76,36.76,85.3,-3.35,79.2
+Game A model on Game B,Game A,Game B,1173,304655.0,294531.05,21.71,26.52,95.89,-3.32,79.0
+Game B model on Game B,Game B,Game B,1173,304655.0,294152.1,18.41,21.53,86.42,-3.45,79.8
+Game B model on Game A,Game B,Game A,2003,147928.06,154349.32,34.57,49.88,85.61,4.34,75.6

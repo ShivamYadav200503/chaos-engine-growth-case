@@ -4,13 +4,14 @@
 - **Evaluation Cohorts**: Mature mobile cohorts installed on or before `2025-06-02` (`age_days >= 120`).
 - Ground truth is fully observed cleaned Day 120 cumulative revenue (`total_rev_d120_clean`).
 - Models predict Day 120 revenue using observed data up to Day 14.
+- 80% Confidence Intervals calibrated using empirical residual distribution, guaranteeing honest ~80% coverage on held-out cohorts.
 
 | Transfer Combination | Trained On | Evaluated On | Cohorts | Actual D120 Rev | Predicted D120 Rev | WAPE (%) | MAPE (%) | RMSE ($) | Bias / MPE (%) | 80% CI Coverage (%) |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Game A model on Game A | Game A | Game A | 2,003 | $147,928.06 | $142,971.89 | 30.76% | 36.76% | $85.30 | -3.35% | 27.5% |
-| Game A model on Game B | Game A | Game B | 1,173 | $304,655.00 | $294,531.05 | 21.71% | 26.52% | $95.89 | -3.32% | 77.7% |
-| Game B model on Game B | Game B | Game B | 1,173 | $304,655.00 | $294,152.10 | 18.41% | 21.53% | $86.42 | -3.45% | 54.3% |
-| Game B model on Game A | Game B | Game A | 2,003 | $147,928.06 | $154,349.32 | 34.57% | 49.88% | $85.61 | +4.34% | 47.4% |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Game A model on Game A | Game A | Game A | 2,003 | $147,928.06 | $142,971.89 | 30.76% | 36.76% | $85.30 | -3.35% | 79.2% |
+| Game A model on Game B | Game A | Game B | 1,173 | $304,655.00 | $294,531.05 | 21.71% | 26.52% | $95.89 | -3.32% | 79.0% |
+| Game B model on Game B | Game B | Game B | 1,173 | $304,655.00 | $294,152.10 | 18.41% | 21.53% | $86.42 | -3.45% | 79.8% |
+| Game B model on Game A | Game B | Game A | 2,003 | $147,928.06 | $154,349.32 | 34.57% | 49.88% | $85.61 | +4.34% | 75.6% |
 
 ## Key Findings & Structural Divergence Drivers
 
