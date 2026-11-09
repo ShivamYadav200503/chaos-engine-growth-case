@@ -240,7 +240,8 @@ def build_memo_pdf():
         
         t_end, _, _ = render_proportional_table(ax1, 0.450, table_headers, table_rows, start_x=0.06, total_w=0.88, font_size=7.0, row_h=0.022, header_h=0.026)
         
-        ax1.text(0.06, t_end - 0.008, "*Primary plan achieves 1.0000x direct D120 ROAS ($140,391.63 rev on 75,545 paid installs), and 1.0476x blended ($147,088 rev on 78,839 total installs with verified +4.85% organic halo).", fontsize=6.8, color="#64748b", fontstyle="italic")
+        memo_footnote = "*Primary plan achieves 1.0000x direct D120 ROAS ($140,391.63 rev on 75,545 paid installs), and 1.0476x blended ($147,088 rev on 78,839 total installs with verified +4.85% organic halo)."
+        ax1.text(0.06, t_end - 0.008, escape_dollars(wrap_text(memo_footnote, width=84)), fontsize=6.8, color="#64748b", fontstyle="italic", va="top")
         
         # Embed Frontier Chart
         img_frontier = mpimg.imread(str(FIGS_DIR / "q2_efficient_frontier.png"))
@@ -566,7 +567,8 @@ def build_appendix_pdf():
         ax_f1 = fig.add_axes([0.06, 0.18, 0.88, 0.65])
         ax_f1.imshow(img_f1); ax_f1.axis("off")
         
-        ax.text(0.06, 0.140, "Diagnostic Takeaway: Left uncorrected, these data bugs create spurious ROAS spikes that mislead automated budget allocators.", fontsize=8, color="#64748b", fontstyle="italic")
+        p3_takeaway = "Diagnostic Takeaway: Left uncorrected, these data bugs create spurious ROAS spikes that mislead automated budget allocators."
+        ax.text(0.06, 0.140, escape_dollars(wrap_text(p3_takeaway, width=84)), fontsize=8, color="#64748b", fontstyle="italic", va="top")
         save_inspection_png(fig, "appendix_page_3")
         pdf.savefig(fig); plt.close()
 
@@ -786,7 +788,8 @@ def build_appendix_pdf():
             
         render_proportional_table(ax, 0.825, headers_plan, rows_plan, start_x=0.06, total_w=0.88, font_size=6.5, row_h=0.024, header_h=0.028)
             
-        ax.text(0.06, 0.380, "Note: Full 40-cell allocation table with individual multiple constraints is preserved in outputs/tables/q2_media_plan.csv.", fontsize=7.2, color="#64748b", fontstyle="italic")
+        p8_note = "Note: Full 40-cell allocation table with individual multiple constraints is preserved in outputs/tables/q2_media_plan.csv."
+        ax.text(0.06, 0.380, escape_dollars(wrap_text(p8_note, width=84)), fontsize=7.2, color="#64748b", fontstyle="italic", va="top")
         
         save_inspection_png(fig, "appendix_page_8")
         pdf.savefig(fig); plt.close()
@@ -932,7 +935,8 @@ def build_appendix_pdf():
             
         render_proportional_table(ax, 0.225, headers_sim, rows_sim, start_x=0.06, total_w=0.88, font_size=6.5, row_h=0.022, header_h=0.026)
             
-        ax.text(0.06, 0.080, "Executive Finding: A 2-week production delay erodes -$4,841 in cash and causes D120 ROAS to fail (96.55% < 100%). On-time creative delivery is a strict financial mandate.", fontsize=7.2, color="#64748b", fontstyle="italic")
+        p11_finding = "Executive Finding: A 2-week production delay erodes -$4,841 in cash and causes D120 ROAS to fail (96.55% < 100%). On-time creative delivery is a strict financial mandate."
+        ax.text(0.06, 0.080, escape_dollars(wrap_text(p11_finding, width=84)), fontsize=7.2, color="#64748b", fontstyle="italic", va="top")
         
         save_inspection_png(fig, "appendix_page_11")
         pdf.savefig(fig); plt.close()
