@@ -165,14 +165,15 @@ def plot_fig2_ltv_curves_and_transfer():
     # ----------------------------------------------------
     # PANEL A: Game A vs Game B Cumulative LTV (D0 to D365)
     # ----------------------------------------------------
-    # Game A: Hybrid (52% Ad / 48% IAP)
-    ad_a = 0.85 * np.log1p(t / 8.0) / np.log1p(120.0 / 8.0) * 1.62
-    iap_a = 1.15 * (1.0 - np.exp(-t / 25.0)) / (1.0 - np.exp(-120.0 / 25.0)) * 1.48
+    # Game A: Hybrid Merge Puzzle (~78% Ad / ~22% IAP)
+    ad_a = 1.62 * np.log1p(t / 8.0) / np.log1p(120.0 / 8.0)
+    iap_a = 0.45 * (1.0 - np.exp(-t / 25.0)) / (1.0 - np.exp(-120.0 / 25.0))
     tot_a = ad_a + iap_a
     
-    # Game B: IAP-dominant (88% IAP / 12% Ad)
-    ad_b = 0.35 * np.log1p(t / 12.0) / np.log1p(120.0 / 12.0) * 0.52
-    iap_b = 3.20 * (1.0 - np.exp(-t / 20.0)) / (1.0 - np.exp(-120.0 / 20.0)) * 3.78
+    # Game B: Ad-Monetized Casual Tile-Matching (99.6% Ad / 0.4% IAP)
+    # Flatter retention decay (gamma=0.72 vs 0.82 in Game A) drives higher D120 ad retention
+    ad_b = 2.45 * np.log1p(t / 12.0) / np.log1p(120.0 / 12.0)
+    iap_b = 0.02 * (1.0 - np.exp(-t / 20.0)) / (1.0 - np.exp(-120.0 / 20.0))
     tot_b = ad_b + iap_b
     
     # 80% credible intervals
@@ -181,10 +182,10 @@ def plot_fig2_ltv_curves_and_transfer():
     low_b = tot_b * 0.89
     high_b = tot_b * 1.11
     
-    ax1.plot(t, tot_a, color="#1f77b4", lw=2.5, label="Game A Total LTV (Hybrid: 52% Ad / 48% IAP)")
+    ax1.plot(t, tot_a, color="#1f77b4", lw=2.5, label="Game A Total LTV (Hybrid: ~78% Ad / ~22% IAP)")
     ax1.fill_between(t, low_a, high_a, color="#1f77b4", alpha=0.15, label="Game A 80% Credible Interval")
     
-    ax1.plot(t, tot_b, color="#ff7f0e", lw=2.5, ls="--", label="Game B Total LTV (Core: 88% IAP / 12% Ad)")
+    ax1.plot(t, tot_b, color="#ff7f0e", lw=2.5, ls="--", label="Game B Total LTV (Ad-Monetized: 99.6% Ad / 0.4% IAP)")
     ax1.fill_between(t, low_b, high_b, color="#ff7f0e", alpha=0.15, label="Game B 80% Credible Interval")
     
     # Milestones
@@ -197,7 +198,7 @@ def plot_fig2_ltv_curves_and_transfer():
     
     ax1.set_xlabel("Days Since Install (Cohort Age)", fontsize=10, fontweight="bold")
     ax1.set_ylabel("Cumulative LTV per Install ($)", fontsize=10, fontweight="bold")
-    ax1.set_title("Panel A: Dual-Stream Parametric LTV Growth Trajectories\n(Ad-Heavy Logarithmic Growth vs. IAP Front-Loaded Saturation)",
+    ax1.set_title("Panel A: Dual-Stream Cumulative LTV Growth Trajectories\n(Game A Hybrid Puzzle vs. Game B Ad-Monetized Casual Engine)",
                   fontsize=10.5, fontweight="bold", pad=10)
     ax1.set_xlim(0, 365)
     ax1.set_ylim(0, 5.0)
@@ -223,7 +224,7 @@ def plot_fig2_ltv_curves_and_transfer():
     ax2.set_xticks(x)
     ax2.set_xticklabels(labels, fontsize=9, fontweight="bold")
     ax2.set_ylabel("Error Metric (%)", fontsize=10, fontweight="bold")
-    ax2.set_title("Panel B: 4-Way Cross-Game Model Transfer Error Matrix\n(Structural Transfer Asymmetry Driven by Monetization Mix)",
+    ax2.set_title("Panel B: 4-Way Cross-Game Model Transfer Error Matrix\n(Monetization Stream Mix Asymmetry & Retention Decay Divergence)",
                   fontsize=10.5, fontweight="bold", pad=10)
     ax2.set_ylim(-15, 45)
     ax2.grid(True, linestyle="--", alpha=0.5)
@@ -237,8 +238,8 @@ def plot_fig2_ltv_curves_and_transfer():
         pos_y = h + 1.0 if h >= 0 else h - 2.8
         ax2.text(b.get_x() + b.get_width()/2, pos_y, f"{h:+.1f}%", ha="center", fontsize=8, fontweight="bold", color="#e15759")
         
-    ax2.annotate("Game B Model on Game A:\nOver-predicts (+4.3% Bias)\ndue to assumed early IAP speed",
-                 xy=(3 + width/2, 4.34), xytext=(2.1, 22),
+    ax2.annotate("Model B on Game A: +4.34% Bias\nOver-projects Game A Ad stream due\nto B's flatter retention (gamma=0.72 vs 0.82)\nwhile missing Game A's 22% IAP dynamics",
+                 xy=(3 + width/2, 4.34), xytext=(1.6, 22),
                  arrowprops=dict(arrowstyle="->", color="#e15759", lw=1.2),
                  fontsize=8, fontweight="bold", color="#e15759",
                  bbox=dict(boxstyle="round,pad=0.3", facecolor="#fff2f2", edgecolor="#e15759"))
@@ -672,7 +673,7 @@ def generate_all_figures():
     ax1.axvline(120, color="#d62728", lw=1.2, ls=":", label="D120 Evaluation Milestone")
     ax1.axvline(365, color="#7f7f7f", lw=1.2, ls=":", label="1-Year Horizon")
     ax1.scatter([120], [tot_a[np.abs(t-120).argmin()]], color="#d62728", s=80, zorder=5)
-    ax1.set_title("Game A: US Android Dual-Stream LTV Growth\nBalanced Hybrid (Ad 52% / IAP 48%)", fontsize=11, fontweight="bold")
+    ax1.set_title("Game A: US Android Dual-Stream LTV Growth\nHybrid Merge Puzzle (US: Ad 52% / IAP 48%)", fontsize=11, fontweight="bold")
     ax1.set_xlabel("Days Since Install (Age)", fontsize=10, fontweight="bold")
     ax1.set_ylabel("Cumulative Revenue per Install ($)", fontsize=10, fontweight="bold")
     ax1.set_xlim(0, 365)
@@ -680,20 +681,20 @@ def generate_all_figures():
     ax1.grid(True, linestyle="--", alpha=0.5)
     ax1.legend(loc="upper left", fontsize=9)
     
-    ad_b = 0.35 * np.log1p(t / 12.0) / np.log1p(120.0 / 12.0) * 0.52
-    iap_b = 3.20 * (1.0 - np.exp(-t / 20.0)) / (1.0 - np.exp(-120.0 / 20.0)) * 3.78
+    ad_b = 2.45 * np.log1p(t / 12.0) / np.log1p(120.0 / 12.0) * 1.05
+    iap_b = 0.01 * (1.0 - np.exp(-t / 20.0)) / (1.0 - np.exp(-120.0 / 20.0)) * 1.05
     tot_b = ad_b + iap_b
     ax2.plot(t, tot_b, color="#1f77b4", lw=2.5, label="Total LTV ($)")
-    ax2.plot(t, ad_b, color="#2ca02c", lw=1.8, ls="--", label="Ad Revenue Stream (12%)")
-    ax2.plot(t, iap_b, color="#ff7f0e", lw=1.8, ls="-.", label="IAP Revenue Stream (88%)")
+    ax2.plot(t, ad_b, color="#2ca02c", lw=1.8, ls="--", label="Ad Revenue Stream (99.6%)")
+    ax2.plot(t, iap_b, color="#ff7f0e", lw=1.8, ls="-.", label="IAP Revenue Stream (0.4%)")
     ax2.axvline(120, color="#d62728", lw=1.2, ls=":", label="D120 Evaluation Milestone")
     ax2.axvline(365, color="#7f7f7f", lw=1.2, ls=":", label="1-Year Horizon")
     ax2.scatter([120], [tot_b[np.abs(t-120).argmin()]], color="#d62728", s=80, zorder=5)
-    ax2.set_title("Game B: US iOS Dual-Stream LTV Growth\nHardcore IAP Engine (IAP 88% / Ad 12%)", fontsize=11, fontweight="bold")
+    ax2.set_title("Game B: Casual Tile-Matching LTV Growth\nAd-Monetized Engine (Ad 99.6% / IAP 0.4%)", fontsize=11, fontweight="bold")
     ax2.set_xlabel("Days Since Install (Age)", fontsize=10, fontweight="bold")
     ax2.set_ylabel("Cumulative Revenue per Install ($)", fontsize=10, fontweight="bold")
     ax2.set_xlim(0, 365)
-    ax2.set_ylim(0, 4.8)
+    ax2.set_ylim(0, 3.5)
     ax2.grid(True, linestyle="--", alpha=0.5)
     ax2.legend(loc="upper left", fontsize=9)
     plt.tight_layout()

@@ -84,8 +84,8 @@ def compile_memo_pdf():
         ax1.text(0.075, 0.868, "EXECUTIVE FIVE-LINE BRIEFING (MANDATORY CFO CORE)", fontsize=10.5, fontweight="bold", color="#0f172a")
         
         cfo_lines = [
-            ("1. Spend Recommendation:", "Deploy $140,391.59 across 12 weeks strictly meeting 1.0000x D120 ROAS ($158,000 with organic halo). Unconstrained CEO scale option ($250k) and 1-Year cash breakeven ($182.3k) also provided."),
-            ("2. Expected Result:", "75,555 paid installs (80% CI: [72.1k, 79.2k]), delivering $140,391.61 Day-120 gross revenue (1.0000x D120 ROAS [0.963x, 1.042x]) and $158,072.89 at 1Y (1.1259x 1Y ROAS). With +4.85% organic halo: 78,839 total installs, $147,088 total D120 revenue, and 1.0476x blended ROAS."),
+            ("1. Spend Recommendation:", "Deploy $140,391.63 across 12 weeks strictly meeting 1.0000x D120 ROAS ($158,000 with organic halo). Unconstrained CEO scale option ($250k) and 1-Year cash breakeven ($182.3k) also provided."),
+            ("2. Expected Result:", "75,545 paid installs (80% CI: [72.1k, 79.2k]), delivering $140,391.63 Day-120 gross revenue (1.0000x D120 ROAS [0.963x, 1.042x]) and $158,072.60 at 1Y (1.1259x 1Y ROAS). With +4.85% organic halo: 78,839 total installs, $147,088 total D120 revenue, and 1.0476x blended ROAS."),
             ("3. Payback Profile:", "Payback <=120d: Net-D Android US, 10 Net-A countries (RO, HK, SE, MX, PL, AR, PT, IL, GB, VN), and Tiers 1, 3, 4. Payback in 1Y: Net-A US, Net-B Android US, Net-C Android US. Non-viable: Net-B iOS US (0.895x 1Y)."),
             ("4. Primary Data Distortions:", "8 critical anomalies proved and repaired: 1.99x mediation double-counting (+$283k spurious ad rev), right-censoring filled with frozen cutoffs, July 14-16 eCPM glitch, 100x local currency/cents bugs, and 4,197 unmatched spend rows ($1,347 preserved; 100.00% spend reconciled)."),
             ("5. Key Strategic Risks:", "Creative wearout (+300% CPI / 1M imps on Net-B/C) and Holiday Surge (+25% CPI in Weeks 8-11). Mitigated via 13 new creative units (5 Net-A, 4 Net-B, 3 Net-C, 1 Net-D) produced on 1-2 week lead times.")
@@ -104,14 +104,14 @@ def compile_memo_pdf():
             "Our constrained portfolio optimization resolves the tension between capital preservation (CFO) and scale (CEO). "
             "Due to diminishing marginal returns (x^-k) and holiday CPI inflation (+25%), deploying the entire $250,000 budget drops "
             "portfolio Day-120 ROAS to 0.7666x (a -$58,343 deficit). The maximum spend satisfying the CFO's D120 ROAS >= 1.00 mandate "
-            "on direct paid spend is exactly $140,391.59."
+            "on direct paid spend is exactly $140,391.63."
         )
         ax1.text(0.05, 0.522, escape_dollars(intro_text), fontsize=8, color="#334155", wrap=True)
         
         # Strategy Comparison Table
         table_headers = ["Planning Strategy", "Quarter Spend", "Budget Share", "Total Installs", "Expected D120 Rev", "D120 ROAS", "1Y ROAS", "Net D120 Cashflow"]
         table_rows = [
-            ["A. Primary CFO Breakeven Plan", "$140,391.59", "56.16%", "78,839", "$140,391.61", "1.0000x*", "1.1259x", "+$0.02"],
+            ["A. Primary CFO Breakeven Plan", "$140,391.63", "56.16%", "78,839", "$140,391.63", "1.0000x*", "1.1259x", "+$0.00"],
             ["B. Blended Organic Breakeven", "$158,000.00", "63.20%", "86,124", "$148,800.00", "0.9418x", "1.0614x", "-$9,200.00"],
             ["C. 1-Year Cash Breakeven Plan", "$182,325.00", "72.93%", "95,010", "$161,600.22", "0.8863x", "1.0000x", "-$20,724.78"],
             ["D. CEO Full Budget Growth Plan", "$250,000.00", "100.00%", "113,193", "$191,656.96", "0.7666x", "0.8657x", "-$58,343.04"]
@@ -134,7 +134,7 @@ def compile_memo_pdf():
                 ax1.text(x + 0.005, t_y + 0.007, escape_dollars(val), color=text_col, fontsize=7.5, fontweight="bold" if is_bold else "normal")
             t_y -= 0.025
             
-        ax1.text(0.05, t_y - 0.005, "*Primary plan achieves 1.0000x direct D120 ROAS ($140,391.61 rev on 75,555 paid installs), and 1.0476x blended ($147,088 rev on 78,839 total installs with verified +4.85% organic halo).", fontsize=7, color="#64748b", fontstyle="italic")
+        ax1.text(0.05, t_y - 0.005, "*Primary plan achieves 1.0000x direct D120 ROAS ($140,391.63 rev on 75,545 paid installs), and 1.0476x blended ($147,088 rev on 78,839 total installs with verified +4.85% organic halo).", fontsize=7, color="#64748b", fontstyle="italic")
         
         # Embed Frontier Chart
         img_frontier = mpimg.imread(str(FIGS_DIR / "q2_efficient_frontier.png"))
@@ -166,7 +166,7 @@ def compile_memo_pdf():
         sec2_text = (
             "All 5 mandatory active lines meet their >=40% baseline spend floor. Net-D Android US is paced at exactly 0.50x baseline ($28,695.54) "
             "to capture its maximum +56.9% efficiency boost (1.516x D120 ROAS after holiday shock, generating +$14,801 net D120 cash profit). "
-            "Why Net-D is held at 50% while Net-B Android US is at 90.8% ($21,914.86): Due to Net-D's steep diminishing returns exponent (k=0.65 "
+            "Why Net-D is held at 50% while Net-B Android US is at 90.8% ($21,911.56): Due to Net-D's steep diminishing returns exponent (k=0.65 "
             "vs k=0.40 on Net-B), spending beyond 0.50x causes Net-D's marginal D120 revenue to drop to $0.531 per dollar—just below the $0.536 "
             "marginal revenue where Net-B Android (90.8%), Net-B iOS (67.4%), and Net-C Android (60.7%) equilibrate under KKT shadow-price conditions.\n\n"
             "Counter-Intuitive Budget Allocation (The 'Cheap-CPI Trap'): Capital is allocated to maximize net margin (LTV - CPI), not minimize gross CPI. "
@@ -187,7 +187,7 @@ def compile_memo_pdf():
         sec3_text = (
             "Time-series OLS regression with day-of-week fixed effects and deterministic time trend across 266 daily records proves a robust "
             "organic K-factor of +0.0485 (t = 3.815, p < 0.001, 95% CI: [0.0235, 0.0735]). Mature organic players monetize at $2.0516 D120 LTV, "
-            "yielding +$0.0995 in incremental D120 revenue per paid install. Crediting this halo elevates portfolio D120 ROAS to 1.0532x and "
+            "yielding +$0.0995 in incremental D120 revenue per paid install. Crediting this halo elevates portfolio D120 ROAS to 1.0476x blended and "
             "expands the CFO breakeven ceiling from $140,392 to $158,000."
         )
         ax2.text(0.05, 0.440, escape_dollars(sec3_text), fontsize=7.8, color="#334155", wrap=True)
@@ -590,7 +590,7 @@ def compile_appendix_pdf():
             bias = f"{float(row['bias_mpe_pct']):.2f}%"
             rmse = f"${float(row['rmse_usd']):.2f}"
             cov = f"{float(row['ci_80_coverage_pct']):.1f}%"
-            viab = "Native In-Domain" if trained == evaluated else ("Underpredicts Whales" if trained == "Game B" else "Cross-Domain Viable")
+            viab = "Native In-Domain" if trained == evaluated else ("Overprojects Ad / Misses IAP" if trained == "Game B" else "Cross-Domain Viable")
             
             vals = [combo, trained, evaluated, wape, bias, rmse, cov, viab]
             for v, x in zip(vals, col_x):
@@ -599,10 +599,10 @@ def compile_appendix_pdf():
             
         sec4_narrative = (
             "Four Root Drivers of Cross-Game Divergence:\n"
-            "1. Monetization Mix Asymmetry: Game A is a balanced hybrid (52% Ad / 48% IAP in US), while Game B is a pure ad engine (99.6% Ad / 0.4% IAP). "
-            "Applying Game B's model to Game A yields a -8.45% systematic under-prediction bias because it completely misses high-value IAP whale monetization.\n"
-            "2. Retention Decay Dynamics: Game B exhibits flatter retention decay (gamma = 0.465 vs Game A's gamma = 0.524), delivering +64% higher active user "
-            "retention at Day 120. Game A users churn faster, requiring higher early monetization to pay back.\n"
+            "1. Monetization Mix Asymmetry: Game A is a balanced hybrid (~78% Ad / ~22% IAP overall, 52% Ad / 48% IAP in US), while Game B is a casual tile-matching engine (99.6% Ad / 0.4% IAP; $303.6k Ad vs $1.1k IAP). "
+            "Applying Game B's model to Game A yields a +4.34% positive bias because Game B's steeper D14->D120 Ad curve over-projects Game A's Ad stream while missing Game A's repeat-payer IAP dynamics. Conversely, Model A on Game B underprojects Game B's long-tail ad potential (-3.32% bias) due to assuming Game A's steeper retention decay.\n"
+            "2. Retention Decay Dynamics: Game B exhibits flatter retention decay (gamma approx 0.72 vs Game A's gamma approx 0.82), delivering +64% higher active user "
+            "retention at Day 120 (2.02% vs 1.23%). Game A users churn faster, requiring higher early monetization to pay back.\n"
             "3. Offerwall Line Dynamics: Net-D in Game A features highly front-loaded IAP monetization (85% of total IAP revenue occurs within 14 days), "
             "whereas Game B contains zero offerwall networks.\n"
             "4. Component vs Multiplier Transferability: Parametric retention decay curves transfer across casual games with high fidelity (Pearson r > 0.90), "
@@ -733,6 +733,12 @@ def compile_appendix_pdf():
         ax_time.imshow(img_time); ax_time.axis("off")
         
         ax.text(0.05, 0.140, "Figure 5: 12-Week Operational Replenishment Gantt Chart with Production Lead Times & Holiday Surge Alignment.", fontsize=8, color="#64748b", fontstyle="italic")
+        ex15_text = (
+            "Exhibit 15 Production Risk Simulation: Baseline: 75,545 paid installs ($1.86 CPI, $140,392 D120 rev, 100.00% ROAS, PASS). "
+            "Scenario 1 (2-Wk Delay): 72,940 installs ($1.92 CPI, $135,551 rev, -$4,841 loss, 96.55% ROAS, FAIL). "
+            "Scenario 2 (50% Under-Production): 68,281 installs ($2.06 CPI, $126,892 rev, -$13,499 loss, 90.38% ROAS, FAIL). Production triggers are hard financial constraints."
+        )
+        ax.text(0.05, 0.080, escape_dollars(ex15_text), fontsize=7.2, color="#0f172a", wrap=True)
         pdf.savefig(fig); plt.close()
         
     pages = get_pdf_page_count(pdf_path)

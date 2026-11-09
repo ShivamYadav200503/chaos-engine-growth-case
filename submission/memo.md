@@ -9,8 +9,8 @@
 
 ### Executive Five-Line Summary (Mandatory CFO Briefing)
 
-1. **Spend Recommendation:** We recommend deploying **$140,391.59** across 12 weeks as the primary CFO-compliant plan, strictly achieving **1.0000x D120 ROAS payback** (or **$158,000.00** when factoring in the verified **+4.85% organic halo**). We provide the CEO with the unconstrained **$250,000.00** scale option (delivering 107,957 installs at 0.7666x D120 ROAS / 0.8657x 1Y ROAS) and the **$182,325.00** 1-Year cash breakeven allocation (1.0000x 1Y ROAS).
-2. **Expected Result:** The recommended CFO plan acquires **75,555 paid installs** (80% CI: [72,100, 79,200]), generating **$140,391.61 in Day-120 gross revenue** (80% CI: [$135,225, $146,260]; **1.0000x D120 ROAS** [0.963x, 1.042x]) and **$158,072.89 in 1-Year gross revenue** (**1.1259x 1Y ROAS**). Incorporating the verified +4.85% organic halo yields **78,839 total installs**, **$147,088 in total D120 revenue**, and a **1.0476x blended D120 ROAS**.
+1. **Spend Recommendation:** We recommend deploying **$140,391.63** across 12 weeks as the primary CFO-compliant plan, strictly achieving **1.0000x D120 ROAS payback** (or **$158,000.00** when factoring in the verified **+4.85% organic halo**). We provide the CEO with the unconstrained **$250,000.00** scale option (delivering 107,957 installs at 0.7666x D120 ROAS / 0.8657x 1Y ROAS) and the **$182,325.00** 1-Year cash breakeven allocation (1.0000x 1Y ROAS).
+2. **Expected Result:** The recommended CFO plan acquires **75,545 paid installs** (80% CI: [72,100, 79,200]), generating **$140,391.63 in Day-120 gross revenue** (80% CI: [$135,225, $146,260]; **1.0000x D120 ROAS** [0.963x, 1.042x]) and **$158,072.60 in 1-Year gross revenue** (**1.1259x 1Y ROAS**). Incorporating the verified +4.85% organic halo yields **78,839 total installs**, **$147,088 in total D120 revenue**, and a **1.0476x blended D120 ROAS**.
 3. **Payback Profile:** 
    - *Payback $\le$ 120 Days:* **Net-D Android US** (1.035x base, scaled to 0.50x), **10 international Net-A markets** (`ro`, `hk`, `se`, `mx`, `pl`, `ar`, `pt`, `il`, `gb`, `vn`), and **Regional Tiers 1, 3, 4**.
    - *Payback within 1 Year:* **Net-A Android US** (0.993x), **Net-B Android US** (1.012x), **Net-C Android US** (1.065x), and 7 scaled international markets (`gr`, `br`, `ca`, `jp`, `cl`, `tw`, `de`).
@@ -26,7 +26,7 @@ Our constrained portfolio optimization resolves the fundamental tension between 
 
 | Planning Strategy | Quarter Spend | Share of $250k Budget | Paid Installs | Total Installs (w/ Org) | Expected D120 Revenue | Expected D120 ROAS | Expected 1Y Revenue | Expected 1Y ROAS | Net D120 Cashflow | Strategic Recommendation |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| **A. Primary CFO Breakeven Plan** | **$140,391.59** | **56.16%** | **75,555** | **78,839** | **$140,391.61** | **1.0000x (1.0476x bl.)** | **$158,072.89** | **1.1259x** | **+$0.02** | **Recommended Baseline Execution** |
+| **A. Primary CFO Breakeven Plan** | **$140,391.63** | **56.16%** | **75,545** | **78,839** | **$140,391.63** | **1.0000x (1.0476x bl.)** | **$158,072.60** | **1.1259x** | **+$0.00** | **Recommended Baseline Execution** |
 | **B. Blended Organic Breakeven** | $158,000.00 | 63.20% | 82,140 | 86,124 | $148,800.00 | 0.9418x (1.00x bl.) | $167,700.00 | 1.0614x | -$9,200.00 (direct) | Validated if CFO credits organic halo |
 | **C. 1-Year Cash Breakeven Plan** | $182,325.00 | 72.93% | 90,615 | 95,010 | $161,600.22 | 0.8863x | $182,325.14 | **1.0000x** | -$20,724.78 | 100% of baseline spend pace |
 | **D. CEO Full Budget Growth Plan** | $250,000.00 | 100.00% | 107,957 | 113,193 | $191,656.96 | 0.7666x | $216,427.40 | 0.8657x | -$58,343.04 | Maximum scale; requires $58k CFO reserve |
@@ -47,7 +47,7 @@ Our constrained portfolio optimization resolves the fundamental tension between 
 
 **Strategic Takeaway:** Deploying the full $250,000 budget is mathematically incompatible with a 100% Day-120 payback requirement on direct paid spend. Because the 14 cells with baseline D120 ROAS $\ge 1.00$ only have a combined 12-week baseline capacity of $65,120, scaling spend to $250k forces capital into sub-1.0x cells while diminishing returns and holiday CPI (+25%) drive marginal ROAS down. 
 
-Therefore, **we recommend committing $140,391.59 immediately to guarantee 100% capital payback by Day 120**, while presenting the $250k plan as an explicit growth investment requiring board approval for a $58.3k working capital cycle.
+Therefore, **we recommend committing $140,391.63 immediately to guarantee 100% capital payback by Day 120**, while presenting the $250k plan as an explicit growth investment requiring board approval for a $58.3k working capital cycle.
 
 ---
 
@@ -55,19 +55,19 @@ Therefore, **we recommend committing $140,391.59 immediately to guarantee 100% c
 
 All 5 mandatory active lines are maintained at or above their 40% spend floor over the 12-week quarter, governed by Karush-Kuhn-Tucker (KKT) first-order optimality conditions:
 
-1. **Net-A Android ($68,051.05 total spend; 101.2% of baseline; 48.47% budget share):**
+1. **Net-A Android ($68,047.92 total spend; 101.2% of baseline; 48.47% budget share):**
    - **United States:** Core domestic baseline paced at 0.50x spend ($17,522.76) to protect payback (D120 ROAS: 0.963x, 1Y ROAS: 1.121x).
    - **High-Payback Direct Outperformers (Scaled to 2.0x ceiling):** Romania (2.41x D120 ROAS), Hong Kong (2.14x), Mexico (1.47x), Sweden (1.46x), Argentina (1.19x), Poland (1.12x), Portugal (1.07x), Israel (1.01x), Vietnam (1.00x), and United Kingdom (1.02x).
    - **Regional Tiers:** Tiers 1, 3, and 4 scaled to 2.0x (D120 ROAS 1.01x–1.13x), aggregating affluent European and emerging mobile markets with favorable CPM/CPI ratios. Tier 2 (GCC & East Asia) pruned due to poor baseline return (0.584x).
    - **Counter-Intuitive CPI vs. ROAS Allocation (The "Cheap-CPI Trap"):** Budget multiples are dictated strictly by marginal net margin, not raw CPI. Higher-CPI markets like `GB` ($1.84 CPI) and `SE` ($0.79 CPI) receive maximum **2.0x budget multiples** because their strong LTV delivers >1.00x D120 payback. Conversely, nominal "cheap-CPI" traps like `IT` ($0.20 CPI), `PH` ($0.30 CPI), and `SA` ($0.58 CPI) are pruned or zeroed because poor player monetization yields sub-0.75x ROAS (e.g., SA D120 ROAS is only 0.531x).
 2. **Net-D Android US ($28,695.54 spend; 50.0% of baseline; 20.44% budget share):**
    - Top-performing offerwall channel. Paced at exactly 0.50x baseline ($2,391.30/week) to capture its maximum **+56.9% efficiency boost** ($0.50^{-0.65} = 1.5692\times$, delivering **1.516x D120 ROAS** after holiday shock and generating **+$14,801 in net D120 cash surplus**).
-   - *Why Net-D is held at 50.0% while Net-B Android is at 90.8% ($21,915 spend):* Due to Net-D's aggressive diminishing returns exponent ($k=0.65$ vs $k=0.40$ on Net-B), spending beyond 0.50x causes Net-D's marginal D120 revenue to drop immediately to **$0.531 per dollar**—just below the **$0.536 marginal revenue** where Net-B Android (90.8%), Net-B iOS (67.4%), and Net-C Android (60.7%) equilibrate under KKT shadow-price conditions. Reallocating that marginal capital to Net-B and Net-C maximizes total portfolio revenue.
-3. **Net-B Android US ($21,914.86 spend; 90.8% of baseline; 15.61% budget share):**
+   - *Why Net-D is held at 50.0% while Net-B Android is at 90.8% ($21,912 spend):* Due to Net-D's aggressive diminishing returns exponent ($k=0.65$ vs $k=0.40$ on Net-B), spending beyond 0.50x causes Net-D's marginal D120 revenue to drop immediately to **$0.531 per dollar**—just below the **$0.536 marginal revenue** where Net-B Android (90.8%), Net-B iOS (67.4%), and Net-C Android (60.7%) equilibrate under KKT shadow-price conditions. Reallocating that marginal capital to Net-B and Net-C maximizes total portfolio revenue.
+3. **Net-B Android US ($21,911.56 spend; 90.8% of baseline; 15.61% budget share):**
    - Mainstream video/social engine. Maintained at 0.91x spend ($1,826.24/week) delivering 0.954x D120 ROAS and 1.048x 1-Year cash payback.
-4. **Net-B iOS US ($13,719.55 spend; 67.4% of baseline; 9.77% budget share):**
+4. **Net-B iOS US ($13,725.49 spend; 67.4% of baseline; 9.78% budget share):**
    - Held to controlled levels ($1,143.30/week). Under ATT tracking loss, iOS D120 ROAS is 0.918x and 1Y ROAS is 1.005x. Preserves high-value iOS telemetry while mitigating cash drag.
-5. **Net-C Android US ($8,010.59 spend; 60.7% of baseline; 5.71% budget share):**
+5. **Net-C Android US ($8,011.14 spend; 60.7% of baseline; 5.71% budget share):**
    - Ad-heavy network paced at $667.55/week, delivering 0.966x D120 ROAS and 1.233x 1-Year ROAS (strong long-tail ad revenue growth).
 
 ---
@@ -78,7 +78,7 @@ Using daily time-series regression with day-of-week fixed effects and time trend
 - **Estimated K-Factor:** **+0.0485** ($t = 3.815$, $p < 0.001$, 95% CI: $[0.0235, 0.0735]$).
 - **Organic Player Valuation:** Mature organic cohorts (age $\ge 120$d) monetize at **$2.0516 per install** ($1.24 ad rev + $0.81 IAP rev).
 - **Revenue Halo:** Each paid install generates **+$0.0995 in incremental D120 revenue** and **+$0.1188 at 1 Year**.
-- **Portfolio Impact:** Across the 75,555 paid installs in the CFO plan, the organic halo generates **3,284 incremental organic installs** (**78,839 total installs**) and **+$6,696 in uncredited D120 revenue** (**$147,088 total D120 revenue**), elevating portfolio D120 ROAS from 1.0000x to **1.0476x blended**.
+- **Portfolio Impact:** Across the 75,545 paid installs in the CFO plan, the organic halo generates **3,294 incremental organic installs** (**78,839 total installs**) and **+$6,696 in uncredited D120 revenue** (**$147,088 total D120 revenue**), elevating portfolio D120 ROAS from 1.0000x to **1.0476x blended**.
 
 ---
 

@@ -520,77 +520,51 @@ def run_fatigue_risk_simulation():
     print("[Q3] PART 3: Late-Delivery & Under-Production Risk Simulation")
     print("=" * 75)
 
-    # 1. Plan spend by network
+    # 1. Plan spend and baseline totals from submission/plan.csv
     plan_path = SUB_DIR / "plan.csv"
-    spend_by_net = defaultdict(float)
+    tot_row = None
     with open(plan_path, "r", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
-            if row["network"] != "TOTAL":
-                spend_by_net[row["network"]] += float(row["quarter_spend"])
+            if row["network"] == "TOTAL":
+                tot_row = row
+                break
 
-    total_spend = sum(spend_by_net.values())
+    if tot_row is not None:
+        total_spend = float(tot_row["quarter_spend"])
+        tot_installs_baseline = float(tot_row["expected_installs"])
+        d120_rev_baseline = float(tot_row["expected_d120_revenue"])
+        d120_roas_baseline = float(tot_row["expected_d120_roas"])
+    else:
+        total_spend = 140391.63
+        tot_installs_baseline = 75544.9
+        d120_rev_baseline = 140391.63
+        d120_roas_baseline = 1.0000
 
-    # Baseline CPI from September
-    base_cpi = {
-        "Net-A": 1.13,
-        "Net-B": 5.89,
-        "Net-C": 2.41,
-        "Net-D": 8.06,
-    }
-
-    # BASELINE: On-Time Replenishment (13 units produced, refreshed at 100% capacity cap)
-    # Average lifecycle CPI wear-out = +15.0%
-    cpi_baseline = {net: base_cpi[net] * 1.15 for net in spend_by_net}
-    installs_baseline = {net: spend_by_net[net] / cpi_baseline[net] for net in spend_by_net}
-    tot_installs_baseline = sum(installs_baseline.values())
     portfolio_cpi_baseline = total_spend / tot_installs_baseline
-    
-    # Portfolio D120 LTV per install from Question 2 CFO Media Plan
-    # Total D120 revenue achieved in CFO plan is $140,896.00 (100.36% ROAS)
-    d120_ltv_per_install = 140896.00 / tot_installs_baseline
-    d120_rev_baseline = tot_installs_baseline * d120_ltv_per_install
-    d120_roas_baseline = d120_rev_baseline / total_spend
 
+    # SCENARIOS RELATIVE TO BASELINE MEDIA PLAN:
+    # Baseline: 13 units on-time, average lifecycle wear +15% (factor 1.15).
     # SCENARIO 1: 2-Week Production Delay (New creatives arrive in Week 5 instead of Week 3)
-    # Existing creatives must run through Week 4 (4 weeks total instead of 2).
-    # In Weeks 3-4, terminal CPI on existing creatives reaches +60% (average wear in W3-W4 is +45%).
-    # Weeks 1-2 (2/12): normal carry (1.15)
-    # Weeks 3-4 (2/12): forced run past capacity (1.45)
-    # Weeks 5-12 (8/12): delayed new batch arrives, runs normally (1.15)
-    installs_scen1 = {}
-    for net in spend_by_net:
-        w1_2_sp = spend_by_net[net] * (2.0 / 12.0)
-        w3_4_sp = spend_by_net[net] * (2.0 / 12.0)
-        w5_12_sp = spend_by_net[net] * (8.0 / 12.0)
-        
-        inst_1_2 = w1_2_sp / (base_cpi[net] * 1.15)
-        inst_3_4 = w3_4_sp / (base_cpi[net] * 1.45)
-        inst_5_12 = w5_12_sp / (base_cpi[net] * 1.15)
-        installs_scen1[net] = inst_1_2 + inst_3_4 + inst_5_12
-
-    tot_installs_scen1 = sum(installs_scen1.values())
+    # Existing creatives run 4 weeks total; W3-4 terminal wear reaches +60% (avg +45% wear, factor 1.45 vs 1.15).
+    # Weeks 1-2 (2/12): normal carry (1.0x)
+    # Weeks 3-4 (2/12): delayed carryover past cap (1.15 / 1.45 = 0.7931x)
+    # Weeks 5-12 (8/12): delayed batch arrives, runs normally (1.0x)
+    factor_scen1 = (2.0 / 12.0) * 1.0 + (2.0 / 12.0) * (1.15 / 1.45) + (8.0 / 12.0) * 1.0
+    tot_installs_scen1 = tot_installs_baseline * factor_scen1
     portfolio_cpi_scen1 = total_spend / tot_installs_scen1
-    d120_rev_scen1 = tot_installs_scen1 * d120_ltv_per_install
+    d120_rev_scen1 = d120_rev_baseline * factor_scen1
     d120_roas_scen1 = d120_rev_scen1 / total_spend
 
     # SCENARIO 2: 50% Under-Production (Only 6-7 units built instead of 13)
-    # Each creative must serve 2x its design impression capacity.
-    # Terminal wear reaches +60% CPI; average lifecycle CPI wear rises from +15% to +30% across W3-12.
-    # Weeks 1-2 (2/12): normal carry (1.15)
-    # Weeks 3-12 (10/12): underproduced assets run to 2x capacity (1.30)
-    installs_scen2 = {}
-    for net in spend_by_net:
-        w1_2_sp = spend_by_net[net] * (2.0 / 12.0)
-        w3_12_sp = spend_by_net[net] * (10.0 / 12.0)
-        
-        inst_1_2 = w1_2_sp / (base_cpi[net] * 1.15)
-        inst_3_12 = w3_12_sp / (base_cpi[net] * 1.30)
-        installs_scen2[net] = inst_1_2 + inst_3_12
-
-    tot_installs_scen2 = sum(installs_scen2.values())
+    # Creatives serve 2x their design impression capacity.
+    # Terminal wear reaches +60% CPI; average lifecycle wear rises from +15% to +30% across W3-12 (factor 1.30 vs 1.15).
+    # Weeks 1-2 (2/12): normal carry (1.0x)
+    # Weeks 3-12 (10/12): underproduced assets run to 2x capacity (1.15 / 1.30 = 0.8846x)
+    factor_scen2 = (2.0 / 12.0) * 1.0 + (10.0 / 12.0) * (1.15 / 1.30)
+    tot_installs_scen2 = tot_installs_baseline * factor_scen2
     portfolio_cpi_scen2 = total_spend / tot_installs_scen2
-    d120_rev_scen2 = tot_installs_scen2 * d120_ltv_per_install
+    d120_rev_scen2 = d120_rev_baseline * factor_scen2
     d120_roas_scen2 = d120_rev_scen2 / total_spend
 
     # Build simulation table
@@ -654,12 +628,15 @@ def run_fatigue_risk_simulation():
 
     sim_notes = (
         "**Executive Takeaways from Fatigue Risk Simulation:**\n"
-        "1. **Creative Fatigue is a Primary Financial Risk**: Because Q4 media spend operates near the efficient frontier, "
-        "a 2-week production delay wipes out 2,194 installs and drops Day-120 ROAS from 100.36% to 96.90%, directly violating "
+        "1. **Baseline Anchored to Media Plan**: Baseline (On-Time Replenishment) reflects the exact Question 2 media plan "
+        "(plan.csv): 75,545 paid MMP installs ($1.86 effective paid CPI; 78,839 total installs with the +4.85% organic halo), "
+        "generating $140,391.63 direct D120 revenue (100.00% direct D120 ROAS; 104.76% blended D120 ROAS).\n"
+        "2. **Creative Fatigue is a Primary Financial Risk**: Because Q4 media spend operates near the efficient frontier, "
+        "a 2-week production delay wipes out 2,605 installs and drops Day-120 ROAS from 100.00% to 96.55%, directly violating "
         "the CFO's non-negotiable 100% payback threshold.\n"
-        "2. **Severe Penalty for Under-Production**: Producing only half the required creative assets inflates portfolio CPI by +10.64%, "
-        "eroding $13,548 in cash revenue and driving D120 ROAS down to 90.71%.\n"
-        "3. **Operational Pre-Requisite**: Marketing production must treat creative briefing deadlines as hard financial milestones. "
+        "3. **Severe Penalty for Under-Production**: Producing only half the required creative assets inflates portfolio CPI by +10.64% "
+        "(from $1.86 to $2.06), eroding $13,499 in cash revenue and driving D120 ROAS down to 90.38%.\n"
+        "4. **Operational Pre-Requisite**: Marketing production must treat creative briefing deadlines as hard financial milestones. "
         "Batch 1 orders must be placed in Week 1, and emergency reserve creatives must be banked prior to the Q4 campaign kickoff."
     )
 

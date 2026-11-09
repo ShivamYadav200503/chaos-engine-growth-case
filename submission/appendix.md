@@ -101,16 +101,16 @@ We evaluated the 4-way cross-game transfer matrix on mature 14-day holdout cohor
 
 | Training Game | Evaluation Game | Metric Target | WAPE (%) | Bias (%) | Pearson $r$ | 80% CI Coverage | Transfer Viability |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| **Game A** | **Game A** | D120 ROAS | **30.76%** | -2.71% | 0.8841 | **79.2%** | **In-Sample Baseline (Calibrated)** |
-| **Game A** | **Game B** | D120 ROAS | **21.71%** | +4.12% | 0.9124 | **79.0%** | **High Transferability (Ad Curve Robust)** |
-| **Game B** | **Game B** | D120 ROAS | **18.41%** | -1.15% | 0.9412 | **79.8%** | **In-Sample Baseline (Pure Ad)** |
-| **Game B** | **Game A** | D120 ROAS | **34.57%** | -8.45% | 0.8241 | **75.6%** | **Moderate Transferability (Underpredicts IAP)** |
+| **Game A** | **Game A** | D120 ROAS | **30.76%** | -3.35% | 0.8841 | **79.2%** | **In-Sample Baseline (Calibrated)** |
+| **Game A** | **Game B** | D120 ROAS | **21.71%** | -3.32% | 0.9124 | **79.0%** | **High Transferability (Ad Curve Robust)** |
+| **Game B** | **Game B** | D120 ROAS | **18.41%** | -3.45% | 0.9412 | **79.8%** | **In-Sample Baseline (Pure Ad)** |
+| **Game B** | **Game A** | D120 ROAS | **34.57%** | +4.34% | 0.8241 | **75.6%** | **Moderate Transferability (Overprojects Ad / Misses IAP)** |
 
 ### Four Structural Divergence Drivers:
-1. **Monetization Architecture Asymmetry:** Game A is a balanced hybrid (52% Ad / 48% IAP in US), whereas Game B is a pure ad engine (99.6% Ad / 0.4% IAP). Transferring B's parameters to A systematically underprojects high-value IAP whales.
-2. **Retention Decay & Longevity:** Game B exhibits flatter retention decay ($\gamma = 0.465$ vs Game A's $\gamma = 0.524$), yielding +64% higher active user retention at Day 120.
+1. **Monetization Architecture Asymmetry:** Game A is a balanced hybrid (~78% Ad / ~22% IAP overall, 52% Ad / 48% IAP in US), whereas Game B is a casual tile-matching engine (99.6% Ad / 0.4% IAP; $303.6k Ad vs $1.1k IAP). Transferring B's parameters to A over-projects Game A's Ad stream (+4.34% net bias) due to B's flatter retention curve while missing Game A's high-value repeat-payer IAP dynamics. Conversely, Model A on Game B underprojects Game B's long-tail ad potential (-3.32% bias) due to assuming Game A's steeper retention decay.
+2. **Retention Decay & Longevity:** Game B exhibits flatter retention decay ($\gamma \approx 0.72$ vs Game A's $\gamma \approx 0.82$), yielding +64% higher active user retention at Day 120 (2.02% in Game B vs 1.23% in Game A).
 3. **Offerwall Channel Dynamics:** Net-D in Game A features highly front-loaded IAP monetization (85% of IAP occurs within 14 days), whereas Game B contains no active offerwall networks.
-4. **Component vs Multiplier Robustness:** Retention decay curves transfer across casual games far more stably than raw revenue multipliers, which are heavily distorted by local currency and ad mediation bugs.
+4. **Component vs Multiplier Robustness:** Separate parametric ad and IAP modeling transfers across casual games far more stably than monolithic revenue multipliers, which are heavily distorted by local currency, country mix, and ad mediation bugs.
 
 Refer to [q1_cross_game_transfer.md](file:///c:/Users/sy422/OneDrive/Documents/GitHub/chaos-engine-growth-case/outputs/tables/q1_cross_game_transfer.md).
 
@@ -162,11 +162,17 @@ Refer to:
   - **Net-B (3 Minimum vs 4 Recommended Units):** Generating 293.3k impressions across Weeks 3–12 requires a theoretical minimum of $\lceil 293,271 / 100,000 \rceil = 3$ shared ad sets. However, **we recommend 4 ad sets** (launches: W3, W6, W9, W12) to establish a 1-set staggered operational buffer ensuring neither Android nor iOS crosses +30% CPI during the peak holiday surge.
   - **Net-C:** 3 new ad packs launched at Weeks 3, 7, 11 (serving ~100k imps each).
   - **Net-D:** 1 new store listing image (burns only 50.9k imps of its 200k capacity, enduring the full quarter at only +7.6% wear).
-  - **Net-D:** 1 new store listing image (endures all 10 weeks at only +7.6% wear).
+
+### Creative Production & Fatigue Risk Simulation (Exhibit 15):
+We simulated late-delivery and under-production scenarios against the CFO's 100.0% payback mandate:
+- **Baseline (On-Time Replenishment):** 13 units produced on-time. Delivers **75,545 paid installs** at **$1.86 portfolio CPI**, generating **$140,392 Day-120 revenue** (**100.00% D120 ROAS** — **PASS**).
+- **Scenario 1 (2-Week Production Delay):** Creatives arrive in Week 5 instead of Week 3. W3–W4 assets push past wearout limits, causing +3.57% CPI inflation ($1.92 CPI). Yields **72,940 installs** (-2,605 lost), **$135,551 D120 revenue** (-$4,841 cash deficit), dropping D120 ROAS to **96.55%** (-3.45 pts — **FAIL**). *Mitigation:* Throttle W3–W4 spend by 20% and deploy evergreen reserve assets.
+- **Scenario 2 (50% Under-Production):** Only 7 units built. Creatives serve 2x design capacity, inflating portfolio CPI by +10.64% ($2.06 CPI). Yields **68,281 installs** (-7,264 lost), **$126,892 D120 revenue** (-$13,499 cash deficit), crashing D120 ROAS to **90.38%** (-9.62 pts — **FAIL**). *Mitigation:* Reduce budget to $110k or reallocate toward Net-D offerwall and Net-A text ads.
 
 Refer to:
 - [q3_creative_performance_decomposition.md](file:///c:/Users/sy422/OneDrive/Documents/GitHub/chaos-engine-growth-case/outputs/tables/q3_creative_performance_decomposition.md)
 - [q3_creative_replenishment_schedule.md](file:///c:/Users/sy422/OneDrive/Documents/GitHub/chaos-engine-growth-case/outputs/tables/q3_creative_replenishment_schedule.md)
+- [q3_fatigue_risk_simulation.md](file:///c:/Users/sy422/OneDrive/Documents/GitHub/chaos-engine-growth-case/outputs/tables/q3_fatigue_risk_simulation.md)
 - Figure: [q3_creative_wearout_curves.png](file:///c:/Users/sy422/OneDrive/Documents/GitHub/chaos-engine-growth-case/outputs/figures/q3_creative_wearout_curves.png)
 - Figure: [q3_creative_refresh_timeline.png](file:///c:/Users/sy422/OneDrive/Documents/GitHub/chaos-engine-growth-case/outputs/figures/q3_creative_refresh_timeline.png)
 - Figure: [q1_ltv_growth_curves.png](file:///c:/Users/sy422/OneDrive/Documents/GitHub/chaos-engine-growth-case/outputs/figures/q1_ltv_growth_curves.png)
