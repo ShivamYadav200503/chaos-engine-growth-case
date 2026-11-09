@@ -445,8 +445,8 @@ def compile_appendix_pdf():
             "• Game A (40 Active Cells): Net-A Android is structured into 32 major individual countries and 4 regional tiers (Tier 1 Affluent West, "
             "Tier 2 East Asia & GCC, Tier 3 LatAm & East Europe, Tier 4 Emerging RoW). Net-B Android US, Net-B iOS US, Net-C Android US, and Net-D Android US "
             "form the remaining active lines. Total baseline weekly spend = $15,193.72 ($182,324.64 12-week baseline).\n"
-            "• Game B (28 Cells & Paused Networks): Explicit tracking of paused network test dates: Net-C paused on 2025-02-12; Net-F paused on 2025-03-31; "
-            "Net-E paused on 2025-05-28; Net-D paused on 2025-08-25. Active channels in September: Net-A Android, Net-B Android, Net-B iOS."
+            "• Game B (28 Cells & Paused Networks): Paused line stop dates: Net-F iOS stopped 2025-03-31, Net-E Android stopped 2025-05-28, "
+            "Net-A Non-US stopped 2025-07-10, Net-B Android stopped 2025-08-20, Net-B iOS stopped 2025-09-06. Active in September: Net-A Android US, Net-C Android, Net-C iOS, and Net-D Android."
         )
         ax.text(0.05, 0.810, escape_dollars(sec2_desc), fontsize=7.8, color="#334155", wrap=True)
         

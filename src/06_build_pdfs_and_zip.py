@@ -543,14 +543,15 @@ def build_appendix_pdf():
         
         ax.text(0.05, 0.915, "Exhibit 3: Game B Player Values & Paused Network Audit Summary", fontsize=10.5, fontweight="bold", color="#0f172a")
         sec2b_desc = (
-            "Game B contains 28 historical cells across 6 ad networks. Historical test dates and pause timestamps:\n"
-            "• Net-C (iOS/Android): Paused on 2025-02-12 (ph, us tested; D120 ROAS sub-0.67x).\n"
-            "• Net-F (iOS): Paused on 2025-03-31 (gb, us tested; zero conversions; D120 ROAS 0.00x).\n"
-            "• Net-E (Android US): Paused on 2025-05-28 (D120 ROAS 0.507x; failed payback).\n"
-            "• Net-D (Android US): Paused on 2025-08-25 (D120 ROAS 0.473x; failed payback).\n"
-            "• Active Channels in September Baseline: Net-A Android (au, br, ca, gb, nz, ph, us) and Net-B (Android US, iOS US)."
+            "Game B contains 28 historical cells across 6 ad networks. Exact stop dates for paused lines:\n"
+            "• Net-F iOS: Paused 2025-03-31 (gb stopped Mar 25; us stopped Mar 31; total spend $1,489.87; zero conversion).\n"
+            "• Net-E Android: Paused 2025-05-28 (active 2025-03-24..2025-05-28; total spend $25,733.51; D120 ROAS 0.507x).\n"
+            "• Net-A Android Non-US: Paused 2025-07-10 (au, br, ca, gb, nz, ph; US line active through Sep 28 at $1,638.11/wk).\n"
+            "• Net-B Android: Paused 2025-08-20 (gb stopped Mar 27, ca Apr 2, us Aug 20; total spend $153,213.91; $0 in Sep).\n"
+            "• Net-B iOS: Paused 2025-09-06 (ca stopped Apr 2; us started Feb 12 and stopped Sep 6; $316.70 early Sep = $79.17/wk).\n"
+            "• Active Lines through 2025-09-28: Net-A Android US ($1,638.11/wk), Net-C Android US & PH ($873.56/wk), Net-C iOS US ($3,857.52/wk), and Net-D Android US ($3,800.23/wk)."
         )
-        ax.text(0.05, 0.805, escape_dollars(sec2b_desc), fontsize=7.8, color="#334155", wrap=True)
+        ax.text(0.05, 0.795, escape_dollars(sec2b_desc), fontsize=7.6, color="#334155", wrap=True)
         
         gb_cells = pd.read_csv(TABLES_DIR / "q1_gameB_cell_values.csv")
         sample_gb = gb_cells[gb_cells["country_cell"].isin(["us", "ph", "ca", "gb"]) | gb_cells["status"].str.startswith("Paused")].head(14).copy()

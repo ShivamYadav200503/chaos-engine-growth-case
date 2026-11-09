@@ -169,7 +169,7 @@ def run_natural_experiments_check(ga: pd.DataFrame, gb: pd.DataFrame):
     print(f"  [Experiment 2] Game A Net-C & Net-D Android Launch (Late July 2025):")
     print(f"    Organic Android US Daily Installs (30d Pre vs Post): {pre_and_us:.2f} -> {post_and_us:.2f} (+{and_jump_pct:.1f}%)")
     
-    # 3. Game B Network Pauses (Net-E stopped 2025-05-28, Net-D stopped 2025-08-25)
+    # 3. Game B Network Pauses (Net-E stopped 2025-05-28, Net-B stopped 2025-08-20)
     gb["dt"] = pd.to_datetime(gb["install_date"])
     gb_org = gb[gb["network"] == "Organic"].groupby("dt")["installs"].sum()
     pre_may28 = gb_org[(gb_org.index >= "2025-04-28") & (gb_org.index < "2025-05-28")].mean()

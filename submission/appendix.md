@@ -61,7 +61,7 @@ Baseline economics are established over the 4-week pre-quarter window (**Septemb
     - *Tier 3 (LatAm & East Europe):* `co`, `pe`, `cz`, `bg`, `hr`, `si`, `ee`, `lv`, `lt`, `rs`, `ec`, `cr`, `uy`, `pa`, `do`, `gt`, `sv`, `bo`, `py`, `mk`, `ba`, `al`, `ge`, `am`, `md`, `by`
     - *Tier 4 (RoW Emerging):* `id`, `pk`, `bd`, `ng`, `eg`, `za`, `ke`, `gh`, `dz`, `ma`, `tn`, `iq`, `jo`, `lb`, `lk`, `np`, `kh`, `mm`, `la`, `uz`, `kz`, `az`, `zz`
   - `Net-B Android US`, `Net-B iOS US`, `Net-C Android US`, `Net-D Android US`.
-- **Game B:** 28 cells with explicit tracking of paused lines (`Net-C` stopped 2025-02-12; `Net-F` stopped 2025-03-31; `Net-E` stopped 2025-05-28; `Net-D` stopped 2025-08-25).
+- **Game B:** 28 cells with explicit tracking of paused lines: `Net-F iOS` stopped 2025-03-31 ($1,489.87 total spend), `Net-E Android` stopped 2025-05-28 ($25,733.51 total spend), `Net-A Android Non-US` (au, br, ca, gb, nz, ph) stopped 2025-07-10, `Net-B Android` stopped 2025-08-20 ($153,213.91 total spend, $0 in Sep), and `Net-B iOS` stopped 2025-09-06 ($135,876.56 total spend, $79.17/wk in Sep). Active channels through September 28: `Net-A Android US` ($1,638.11/wk), `Net-C Android US & PH` ($873.56/wk), `Net-C iOS US` ($3,857.52/wk), and `Net-D Android US` ($3,800.23/wk).
 
 Refer to:
 - [q1_market_cell_taxonomy_game_a.md](file:///c:/Users/sy422/OneDrive/Documents/GitHub/chaos-engine-growth-case/outputs/tables/q1_market_cell_taxonomy_game_a.md)
@@ -109,7 +109,7 @@ We evaluated the 4-way cross-game transfer matrix on mature 14-day holdout cohor
 ### Four Structural Divergence Drivers:
 1. **Monetization Architecture Asymmetry:** Game A is a balanced hybrid (~78% Ad / ~22% IAP overall, 52% Ad / 48% IAP in US), whereas Game B is a casual tile-matching engine (99.6% Ad / 0.4% IAP; $303.6k Ad vs $1.1k IAP). Transferring B's parameters to A over-projects Game A's Ad stream (+4.34% net bias) due to B's flatter retention curve while missing Game A's high-value repeat-payer IAP dynamics. Conversely, Model A on Game B underprojects Game B's long-tail ad potential (-3.32% bias) due to assuming Game A's steeper retention decay.
 2. **Retention Decay & Longevity:** Game B exhibits flatter retention decay ($\gamma \approx 0.72$ vs Game A's $\gamma \approx 0.82$), yielding +64% higher active user retention at Day 120 (2.02% in Game B vs 1.23% in Game A).
-3. **Offerwall Channel Dynamics:** Net-D in Game A features highly front-loaded IAP monetization (85% of IAP occurs within 14 days), whereas Game B contains no active offerwall networks.
+3. **Offerwall Channel Dynamics:** Net-D in Game A features highly front-loaded IAP monetization (85% of IAP occurs within 14 days), whereas Net-D in Game B is purely ad-monetized (tile-matching rewarded ads) without high-value IAP payer events.
 4. **Component vs Multiplier Robustness:** Separate parametric ad and IAP modeling transfers across casual games far more stably than monolithic revenue multipliers, which are heavily distorted by local currency, country mix, and ad mediation bugs.
 
 Refer to [q1_cross_game_transfer.md](file:///c:/Users/sy422/OneDrive/Documents/GitHub/chaos-engine-growth-case/outputs/tables/q1_cross_game_transfer.md).
@@ -130,11 +130,11 @@ subject to:
 6. Holiday Shock: $\text{HOLIDAY\_FACTOR} = \frac{8}{12} \cdot 1.0 + \frac{4}{12} \cdot \frac{1}{1.25} = \frac{11.2}{12.0} \approx 0.933333$.
 
 ### Key Findings & Karush-Kuhn-Tucker (KKT) Economics:
-- **CFO Breakeven Ceiling:** Direct paid spend is capped at **$140,391.59** to satisfy 1.0000x D120 payback.
+- **CFO Breakeven Ceiling:** Direct paid spend is capped at **$140,391.63** to satisfy 1.0000x D120 payback.
 - **KKT Shadow Price Equilibrations ($\lambda \approx 0.536$):**
   - *Why Net-D Android US is held at 50.0% ($28,696 spend) while Net-B Android US is at 90.8% ($21,912 spend):* Below 0.50x spend, Net-D captures its maximum allowable scaling efficiency gain ($0.50^{-0.65} = 1.5692\times$, achieving **1.516x D120 ROAS** after holiday shock and producing **+$14,801 in net D120 cash profit**). However, beyond 0.50x, Net-D's high diminishing returns exponent ($k=0.65$ vs $k=0.40$ on Net-B) drops its marginal D120 revenue to **$0.531 per dollar spent**. This falls strictly below the **$0.536 marginal revenue** where Net-B Android (90.8%), Net-B iOS (67.4%), and Net-C Android (60.7%) equilibrate under KKT optimality conditions. Capital allocated beyond 0.50x on Net-D produces less revenue than deploying it on Net-B and Net-C.
   - *Counter-Intuitive Budget Allocation (The "Cheap-CPI Trap"):* Portfolio optimization allocates capital to maximize net margin ($\text{LTV} - \text{CPI}$), not minimize gross CPI. Consequently, higher-CPI cells like `Net-A GB` ($1.84 CPI) and `SE` ($0.79 CPI) receive maximum **2.0x budget multipliers** because their strong monetization delivers >1.00x D120 payback. In contrast, superficial "cheap-CPI" traps like `IT` ($0.20 CPI), `PH` ($0.30 CPI), and `SA` ($0.58 CPI) are pruned to zero because their weak player monetization fails to return capital (e.g., SA D120 ROAS is only 0.531x).
-- **Organic Uplift Catalyst:** Econometric OLS confirms an organic K-factor of **+0.0485** ($t=3.815, p < 0.001$), generating +$0.0995 D120 revenue per paid install. Crediting this halo expands the CFO breakeven ceiling to **$158,000.00**.
+- **Organic Uplift Catalyst & Natural Experiments:** Econometric OLS confirms an organic K-factor of **+0.0485** ($t=3.815, p < 0.001$), generating +$0.0995 D120 revenue per paid install. Crediting this halo expands the CFO breakeven ceiling to **$158,000.00**. Natural experiments confirm this: when `Net-B iOS` launched on May 20 in Game A, US Organic iOS installs surged +587% (4.53 to 31.12/day); when `Net-C` and `Net-D` Android launched in late July, US Organic Android installs jumped +45.2%. In Game B, network pauses (e.g., `Net-E Android` on May 28, `Net-B Android` on Aug 20) drove immediate contractions in baseline organic discovery.
 - **CEO Scale Option:** The full $250,000 budget deploys 107,957 installs at 0.7666x D120 ROAS ($191.7k rev) and 0.8657x 1Y ROAS ($216.4k rev).
 
 Refer to:
