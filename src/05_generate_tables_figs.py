@@ -281,17 +281,23 @@ def plot_fig3_q2_pareto_and_allocation():
     # Plan A: $87.8k, Plan B: $140.4k, Plan C: $182.3k, Plan D: $250k
     ax1.scatter([140.39], [1.0000], color="#d62728", s=120, zorder=5)
     ax1.annotate("Recommended CFO Plan:\n$140,392 Spend\n1.0000x Direct / 1.0476x Blended",
-                 xy=(140.39, 1.0000), xytext=(155, 1.15),
+                 xy=(140.39, 1.0000), xytext=(150, 1.18),
                  arrowprops=dict(arrowstyle="->", color="#d62728", lw=1.5),
                  fontsize=8.5, fontweight="bold", color="#d62728",
                  bbox=dict(boxstyle="round,pad=0.3", facecolor="#fff2f2", edgecolor="#d62728"))
                  
     ax1.scatter([250.0], [0.7666], color="#7f7f7f", s=100, zorder=5)
     ax1.annotate("CEO Max Plan ($250k):\n0.7666x D120 ROAS\n(-$58.3k Cash Deficit)",
-                 xy=(250.0, 0.7666), xytext=(220, 0.62),
+                 xy=(250.0, 0.7666), xytext=(205, 0.88),
                  arrowprops=dict(arrowstyle="->", color="#7f7f7f", lw=1.2),
                  fontsize=8, fontweight="bold", color="#555555",
                  bbox=dict(boxstyle="round,pad=0.3", facecolor="#f8f8f8", edgecolor="#7f7f7f"))
+                 
+    # Net-D ($28.7k) and Net-B ($21.9k) Optimal Allocation Callout Box (Offset upward/clear)
+    ax1.annotate("KKT Optimal Spend Allocations:\n* Net-D Android US: $28.7k (1.516x D120)\n* Net-B Android US: $21.9k (0.893x D120)\n* Net-A Android US: $31.6k (0.825x D120)",
+                 xy=(140.39, 1.0000), xytext=(66, 0.60),
+                 fontsize=8, fontweight="bold", color="#1e293b",
+                 bbox=dict(boxstyle="round,pad=0.35", facecolor="#f0fdf4", edgecolor="#16a34a"))
                  
     ax1.set_xlabel("Quarter Media Spend ($ Thousands)", fontsize=10, fontweight="bold")
     ax1.set_ylabel("Portfolio Return on Ad Spend (ROAS)", fontsize=10, fontweight="bold")
@@ -300,7 +306,7 @@ def plot_fig3_q2_pareto_and_allocation():
     ax1.set_xlim(60, 270)
     ax1.set_ylim(0.55, 1.35)
     ax1.grid(True, linestyle="--", alpha=0.5)
-    ax1.legend(loc="upper right", fontsize=8.5)
+    ax1.legend(loc="lower right", fontsize=8.0, framealpha=0.92)
     
     # ----------------------------------------------------
     # PANEL B: Baseline vs Recommended Spend Across Key Cells
@@ -356,6 +362,12 @@ def plot_fig3_q2_pareto_and_allocation():
     ax2_r.tick_params(axis="y", labelcolor="#d62728")
     ax2_r.set_ylim(0.2, 2.6)
     
+    # Value callouts for key optimal spend cells offset slightly upward
+    for b, spend_val, name in zip(bars_c, cfo_spends, cell_names):
+        if "Net-D" in name or "Net-B" in name:
+            ax2.text(b.get_x() + b.get_width()/2, spend_val + 0.8, f"${spend_val:.1f}k",
+                     ha="center", va="bottom", fontsize=8, fontweight="bold", color="#0284c7")
+
     # Combined legend
     lines_b, labels_b = ax2.get_legend_handles_labels()
     lines_r, labels_r = ax2_r.get_legend_handles_labels()
@@ -363,6 +375,7 @@ def plot_fig3_q2_pareto_and_allocation():
     
     plt.tight_layout()
     plt.savefig(FIGS_DIR / "fig3_q2_pareto_and_allocation.png", dpi=300)
+    plt.savefig(FIGS_DIR / "fig3_spend_response_and_frontier.png", dpi=300)
     plt.close()
 
 

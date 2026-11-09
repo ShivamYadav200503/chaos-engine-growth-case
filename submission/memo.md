@@ -13,8 +13,8 @@
 2. **Expected Result:** The recommended CFO plan acquires **75,545 paid installs** (80% CI: [72,100, 79,200]), generating **$140,391.63 in Day-120 gross revenue** (80% CI: [$135,225, $146,260]; **1.0000x D120 ROAS** [0.963x, 1.042x]) and **$158,072.60 in 1-Year gross revenue** (**1.1259x 1Y ROAS**). Incorporating the verified +4.85% organic halo yields **78,839 total installs**, **$147,088 in total D120 revenue**, and a **1.0476x blended D120 ROAS**.
 3. **Payback Profile:** 
    - *Payback $\le$ 120 Days:* **Net-D Android US** (1.035x base, scaled to 0.50x), **10 international Net-A markets** (`ro`, `hk`, `se`, `mx`, `pl`, `ar`, `pt`, `il`, `gb`, `vn`), and **Regional Tiers 1, 3, 4**.
-   - *Payback within 1 Year:* **Net-A Android US** (0.993x), **Net-B Android US** (1.012x), **Net-C Android US** (1.065x), and 7 scaled international markets (`gr`, `br`, `ca`, `jp`, `cl`, `tw`, `de`).
-   - *Non-viable within 1 Year:* **Net-B iOS US** (0.895x 1Y) and structural drag markets (`at`, `sa`, `sk`, `Tier 2`), which are pruned or held to mandatory contractual minimums (40% baseline).
+   - *Payback within 1 Year:* **Net-A Android US** (0.960x), **Net-B Android US** (0.960x–0.982x), **Net-C Android US** (1.076x–1.244x), and 7 scaled international markets (`gr`, `br`, `ca`, `jp`, `cl`, `tw`, `de`).
+   - *Non-viable within 1 Year:* **Net-B iOS US** (0.950x 1Y) and structural drag markets (`at`, `sa`, `sk`, `Tier 2`), which are held to mandatory retention floors (0.50x–0.60x baseline).
 4. **Primary Data Distortions:** We proved and repaired 8 foundational data anomalies across raw MMP, telemetry, and cohort tables: (i) 1.99x ad mediation double-counting (+$283k spurious ad rev); (ii) right-censored immature cohorts repeating frozen cutoff values; (iii) July 14–16 eCPM glitch (+$60.6k telemetry spike); (iv) 100x local currency/cents logging bugs (-$31.0k IAP); (v) non-monotonic cumulative revenue (3,380 rows); (vi) 4,197 unmatched UA spend rows ($1,347 ad spend preserved to 100.00% audit match); (vii) non-mobile platforms & invalid signatures; and (viii) telemetry coverage gaps.
 5. **Key Strategic Risks:** Rapid creative fatigue on high-spend networks (+300% CPI inflation per 1M imps on Net-B/C) and the **Thanksgiving/Holiday CPI surge (+25% inflation across Weeks 8–11)**. We mitigate this through a deterministic production schedule requiring **13 new creative units** (5 Net-A, 4 Net-B, 3 Net-C, 1 Net-D) deployed on strict 1-to-2 week production lead times.
 
@@ -56,19 +56,19 @@ Therefore, **we recommend committing $140,391.63 immediately to guarantee 100% c
 All 5 mandatory active lines are maintained at or above their 40% spend floor over the 12-week quarter, governed by Karush-Kuhn-Tucker (KKT) first-order optimality conditions:
 
 1. **Net-A Android ($68,047.92 total spend; 101.2% of baseline; 48.47% budget share):**
-   - **United States:** Core domestic baseline paced at 0.50x spend ($17,522.76) to protect payback (D120 ROAS: 0.963x, 1Y ROAS: 1.121x).
+   - **United States:** Core domestic baseline paced at 0.90x baseline spend ($31,648.29, 0.825x D120 ROAS / 0.960x 1Y ROAS).
    - **High-Payback Direct Outperformers (Scaled to 2.0x ceiling):** Romania (2.41x D120 ROAS), Hong Kong (2.14x), Mexico (1.47x), Sweden (1.46x), Argentina (1.19x), Poland (1.12x), Portugal (1.07x), Israel (1.01x), Vietnam (1.00x), and United Kingdom (1.02x).
    - **Regional Tiers:** Tiers 1, 3, and 4 scaled to 2.0x (D120 ROAS 1.01x–1.13x), aggregating affluent European and emerging mobile markets with favorable CPM/CPI ratios. Tier 2 (GCC & East Asia) pruned due to poor baseline return (0.584x).
-   - **Counter-Intuitive CPI vs. ROAS Allocation (The "Cheap-CPI Trap"):** Budget multiples are dictated strictly by marginal net margin, not raw CPI. Higher-CPI markets like `GB` ($1.84 CPI) and `SE` ($0.79 CPI) receive maximum **2.0x budget multiples** because their strong LTV delivers >1.00x D120 payback. Conversely, nominal "cheap-CPI" traps like `IT` ($0.20 CPI), `PH` ($0.30 CPI), and `SA` ($0.58 CPI) are pruned or zeroed because poor player monetization yields sub-0.75x ROAS (e.g., SA D120 ROAS is only 0.531x).
+   - **Counter-Intuitive CPI vs. ROAS Allocation (The "Cheap-CPI Trap"):** Budget multiples are dictated strictly by marginal net margin, not raw CPI. Higher-CPI markets like `GB` ($1.84 CPI) and `SE` ($0.79 CPI) receive maximum **2.0x budget multiples** because their strong LTV delivers >1.00x D120 payback. Conversely, nominal "cheap-CPI" traps like `IT` ($0.20 CPI), `PH` ($0.30 CPI), `SA` ($0.58 CPI), `SK`, and `AT` are held at the 0.50x–0.60x retention floor ($68–$192 per geo) because poor player monetization yields sub-0.75x ROAS (e.g., SA D120 ROAS is only 0.632x; AT is 0.585x).
 2. **Net-D Android US ($28,695.54 spend; 50.0% of baseline; 20.44% budget share):**
    - Top-performing offerwall channel. Paced at exactly 0.50x baseline ($2,391.30/week) to capture its maximum **+56.9% efficiency boost** ($0.50^{-0.65} = 1.5692\times$, delivering **1.516x D120 ROAS** after holiday shock and generating **+$14,801 in net D120 cash surplus**).
    - *Why Net-D is held at 50.0% while Net-B Android is at 90.8% ($21,912 spend):* Due to Net-D's aggressive diminishing returns exponent ($k=0.65$ vs $k=0.40$ on Net-B), spending beyond 0.50x causes Net-D's marginal D120 revenue to drop immediately to **$0.531 per dollar**—just below the **$0.536 marginal revenue** where Net-B Android (90.8%), Net-B iOS (67.4%), and Net-C Android (60.7%) equilibrate under KKT shadow-price conditions. Reallocating that marginal capital to Net-B and Net-C maximizes total portfolio revenue.
 3. **Net-B Android US ($21,911.56 spend; 90.8% of baseline; 15.61% budget share):**
-   - Mainstream video/social engine. Maintained at 0.91x spend ($1,826.24/week) delivering 0.954x D120 ROAS and 1.048x 1-Year cash payback.
+   - Mainstream video/social engine. Maintained at 0.91x spend ($1,825.96/week), delivering post-holiday effective 0.893x D120 ROAS and 0.960x 1-Year ROAS (0.982x mature).
 4. **Net-B iOS US ($13,725.49 spend; 67.4% of baseline; 9.78% budget share):**
-   - Held to controlled levels ($1,143.30/week). Under ATT tracking loss, iOS D120 ROAS is 0.918x and 1Y ROAS is 1.005x. Preserves high-value iOS telemetry while mitigating cash drag.
+   - Held to controlled levels ($1,143.79/week). Under ATT tracking loss and holiday shock, delivers post-holiday effective 0.893x D120 ROAS and 0.950x 1-Year ROAS (0.979x mature). Preserves high-value iOS telemetry while mitigating cash drag.
 5. **Net-C Android US ($8,011.14 spend; 60.7% of baseline; 5.71% budget share):**
-   - Ad-heavy network paced at $667.55/week, delivering 0.966x D120 ROAS and 1.233x 1-Year ROAS (strong long-tail ad revenue growth).
+   - Ad-heavy network paced at $667.59/week, delivering post-holiday effective 0.975x D120 ROAS and 1.076x 1-Year ROAS (1.244x mature; strong long-tail ad revenue growth).
 
 ---
 

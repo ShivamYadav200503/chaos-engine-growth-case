@@ -21,7 +21,7 @@
 
 All empirical modeling is built upon cleaned master panels preserving **100.00% of historical UA ad spend to the exact cent** ($392,075.67 across 33,362 rows in Game A; $669,975.34 across 10,167 rows in Game B).
 
-Refer to [q1_data_problems_audit.md](file:///c:/Users/sy422/OneDrive/Documents/GitHub/chaos-engine-growth-case/outputs/tables/q1_data_problems_audit.md) for the complete quantitative audit log:
+Refer to [q1_data_problems_audit.md](../outputs/tables/q1_data_problems_audit.md) for the complete quantitative audit log:
 
 1. **Ad Revenue Double-Counting (ad_rev_all_sources_dN vs ad_rev_dN):**
    - *Proof:* Mediation SDK ad revenue (`ad_rev_d30 = $286,979.44`) matches telemetry gross ad revenue ($299,079.46), whereas `ad_rev_all_sources_d30 = $570,204.05` represents a 1.987x inflation due to raw network feed double-counting.
@@ -64,10 +64,10 @@ Baseline economics are established over the 4-week pre-quarter window (**Septemb
 - **Game B:** 28 cells with explicit tracking of paused lines: `Net-F iOS` stopped 2025-03-31 ($1,489.87 total spend), `Net-E Android` stopped 2025-05-28 ($25,733.51 total spend), `Net-A Android Non-US` (au, br, ca, gb, nz, ph) stopped 2025-07-10, `Net-B Android` stopped 2025-08-20 ($153,213.91 total spend, $0 in Sep), and `Net-B iOS` stopped 2025-09-06 ($135,876.56 total spend, $79.17/wk in Sep). Active channels through September 28: `Net-A Android US` ($1,638.11/wk), `Net-C Android US & PH` ($873.56/wk), `Net-C iOS US` ($3,857.52/wk), and `Net-D Android US` ($3,800.23/wk).
 
 Refer to:
-- [q1_market_cell_taxonomy_game_a.md](file:///c:/Users/sy422/OneDrive/Documents/GitHub/chaos-engine-growth-case/outputs/tables/q1_market_cell_taxonomy_game_a.md)
-- [q1_market_cell_taxonomy_game_b.md](file:///c:/Users/sy422/OneDrive/Documents/GitHub/chaos-engine-growth-case/outputs/tables/q1_market_cell_taxonomy_game_b.md)
-- [q1_gameA_cell_values.md](file:///c:/Users/sy422/OneDrive/Documents/GitHub/chaos-engine-growth-case/outputs/tables/q1_gameA_cell_values.md)
-- [q1_gameB_cell_values.md](file:///c:/Users/sy422/OneDrive/Documents/GitHub/chaos-engine-growth-case/outputs/tables/q1_gameB_cell_values.md)
+- [q1_market_cell_taxonomy_game_a.md](../outputs/tables/q1_market_cell_taxonomy_game_a.md)
+- [q1_market_cell_taxonomy_game_b.md](../outputs/tables/q1_market_cell_taxonomy_game_b.md)
+- [q1_gameA_cell_values.md](../outputs/tables/q1_gameA_cell_values.md)
+- [q1_gameB_cell_values.md](../outputs/tables/q1_gameB_cell_values.md)
 
 ---
 
@@ -91,7 +91,7 @@ All predictions are strictly conditioned upon realized cumulative revenue banked
 | **P7** | `Net-A, Android, United States` | ROAS D60 | 2025-08-04..08-17 | 0.7700 (D30) | 0.9306 | **0.9879** | 0.9535 | 1.0223 | Conditioned on D30 (0.7700) + realized Sep 30 banked rev (age 44-57d, 0.9306); power-law remaining tail to D60 & calibrated 80% CI |
 | **P8** | `Net-D, Android, United States` | ROAS D60 | 2025-08-04..08-17 | 0.7205 (D30) | 0.7734 | **0.7887** | 0.7795 | 0.7980 | Offerwall conditioned on D30 (0.7205) + realized Sep 30 banked rev (age 44-57d, 0.7734); mature tail to D60 & calibrated 80% CI |
 
-Refer to [predictions.csv](file:///c:/Users/sy422/OneDrive/Documents/GitHub/chaos-engine-growth-case/submission/predictions.csv) and [q1_cell_ltv_roas_predictions.md](file:///c:/Users/sy422/OneDrive/Documents/GitHub/chaos-engine-growth-case/outputs/tables/q1_cell_ltv_roas_predictions.md).
+Refer to [predictions.csv](./predictions.csv) and [q1_cell_ltv_roas_predictions.md](../outputs/tables/q1_cell_ltv_roas_predictions.md).
 
 ---
 
@@ -112,7 +112,7 @@ We evaluated the 4-way cross-game transfer matrix on mature 14-day holdout cohor
 3. **Offerwall Channel Dynamics:** Net-D in Game A features highly front-loaded IAP monetization (85% of IAP occurs within 14 days), whereas Net-D in Game B is purely ad-monetized (tile-matching rewarded ads) without high-value IAP payer events.
 4. **Component vs Multiplier Robustness:** Separate parametric ad and IAP modeling transfers across casual games far more stably than monolithic revenue multipliers, which are heavily distorted by local currency, country mix, and ad mediation bugs.
 
-Refer to [q1_cross_game_transfer.md](file:///c:/Users/sy422/OneDrive/Documents/GitHub/chaos-engine-growth-case/outputs/tables/q1_cross_game_transfer.md).
+Refer to [q1_cross_game_transfer.md](../outputs/tables/q1_cross_game_transfer.md).
 
 ---
 
@@ -132,18 +132,20 @@ subject to:
 ### Key Findings & Karush-Kuhn-Tucker (KKT) Economics:
 - **CFO Breakeven Ceiling:** Direct paid spend is capped at **$140,391.63** to satisfy 1.0000x D120 payback.
 - **KKT Shadow Price Equilibrations ($\lambda \approx 0.536$):**
+  - *Net-A Android Allocation ($68,048 spend; 48.47% budget share):* Core domestic US is paced at 0.90x baseline spend ($31,648.29, delivering post-holiday 0.825x D120 ROAS / 0.960x 1Y ROAS). Top international outperformers (RO, HK, SE, MX, PL, AR, PT, IL, VN, GB) and Regional Tiers 1, 3, 4 are scaled up to 2.0x.
   - *Why Net-D Android US is held at 50.0% ($28,696 spend) while Net-B Android US is at 90.8% ($21,912 spend):* Below 0.50x spend, Net-D captures its maximum allowable scaling efficiency gain ($0.50^{-0.65} = 1.5692\times$, achieving **1.516x D120 ROAS** after holiday shock and producing **+$14,801 in net D120 cash profit**). However, beyond 0.50x, Net-D's high diminishing returns exponent ($k=0.65$ vs $k=0.40$ on Net-B) drops its marginal D120 revenue to **$0.531 per dollar spent**. This falls strictly below the **$0.536 marginal revenue** where Net-B Android (90.8%), Net-B iOS (67.4%), and Net-C Android (60.7%) equilibrate under KKT optimality conditions. Capital allocated beyond 0.50x on Net-D produces less revenue than deploying it on Net-B and Net-C.
-  - *Counter-Intuitive Budget Allocation (The "Cheap-CPI Trap"):* Portfolio optimization allocates capital to maximize net margin ($\text{LTV} - \text{CPI}$), not minimize gross CPI. Consequently, higher-CPI cells like `Net-A GB` ($1.84 CPI) and `SE` ($0.79 CPI) receive maximum **2.0x budget multipliers** because their strong monetization delivers >1.00x D120 payback. In contrast, superficial "cheap-CPI" traps like `IT` ($0.20 CPI), `PH` ($0.30 CPI), and `SA` ($0.58 CPI) are pruned to zero because their weak player monetization fails to return capital (e.g., SA D120 ROAS is only 0.531x).
+  - *Active Lines Post-Holiday Effective ROAS:* Net-B Android US achieves post-holiday effective **0.893x D120 ROAS / 0.960x 1Y ROAS** ($21,911.56 spend; 0.982x mature); Net-B iOS US achieves **0.893x D120 ROAS / 0.950x 1Y ROAS** ($13,725.49 spend; 0.979x mature); Net-C Android US achieves **0.975x D120 ROAS / 1.076x 1Y ROAS** ($8,011.14 spend; 1.244x mature).
+  - *Counter-Intuitive Budget Allocation (The "Cheap-CPI Trap"):* Portfolio optimization allocates capital to maximize net margin ($\text{LTV} - \text{CPI}$), not minimize gross CPI. Consequently, higher-CPI cells like `Net-A GB` ($1.84 CPI) and `SE` ($0.79 CPI) receive maximum **2.0x budget multiples** because their strong monetization delivers >1.00x D120 payback. In contrast, superficial "cheap-CPI" traps like `IT` ($0.20 CPI), `PH` ($0.30 CPI), `SA` ($0.58 CPI), `SK`, and `AT` are held at the 0.50x–0.60x retention floor ($68–$192 per geo) because their weak player monetization fails to return capital (e.g., SA D120 ROAS is only 0.632x; AT is 0.585x).
 - **Organic Uplift Catalyst & Natural Experiments:** Econometric OLS confirms an organic K-factor of **+0.0485** ($t=3.815, p < 0.001$), generating +$0.0995 D120 revenue per paid install. Crediting this halo expands the CFO breakeven ceiling to **$158,000.00**. Natural experiments confirm this: when `Net-B iOS` launched on May 20 in Game A, US Organic iOS installs surged +587% (4.53 to 31.12/day); when `Net-C` and `Net-D` Android launched in late July, US Organic Android installs jumped +45.2%. In Game B, network pauses (e.g., `Net-E Android` on May 28, `Net-B Android` on Aug 20) drove immediate contractions in baseline organic discovery.
 - **CEO Scale Option:** The full $250,000 budget deploys 107,957 installs at 0.7666x D120 ROAS ($191.7k rev) and 0.8657x 1Y ROAS ($216.4k rev).
 
 Refer to:
-- [plan.csv](file:///c:/Users/sy422/OneDrive/Documents/GitHub/chaos-engine-growth-case/submission/plan.csv)
-- [q2_media_plan.md](file:///c:/Users/sy422/OneDrive/Documents/GitHub/chaos-engine-growth-case/outputs/tables/q2_media_plan.md)
-- [q2_budget_sensitivity_frontier.md](file:///c:/Users/sy422/OneDrive/Documents/GitHub/chaos-engine-growth-case/outputs/tables/q2_budget_sensitivity_frontier.md)
-- [q2_organic_uplift_econometrics.md](file:///c:/Users/sy422/OneDrive/Documents/GitHub/chaos-engine-growth-case/outputs/tables/q2_organic_uplift_econometrics.md)
-- Figure: [q2_efficient_frontier.png](file:///c:/Users/sy422/OneDrive/Documents/GitHub/chaos-engine-growth-case/outputs/figures/q2_efficient_frontier.png)
-- Figure: [q2_spend_allocation_pie.png](file:///c:/Users/sy422/OneDrive/Documents/GitHub/chaos-engine-growth-case/outputs/figures/q2_spend_allocation_pie.png)
+- [plan.csv](./plan.csv)
+- [q2_media_plan.md](../outputs/tables/q2_media_plan.md)
+- [q2_budget_sensitivity_frontier.md](../outputs/tables/q2_budget_sensitivity_frontier.md)
+- [q2_organic_uplift_econometrics.md](../outputs/tables/q2_organic_uplift_econometrics.md)
+- Figure: [q2_efficient_frontier.png](../outputs/figures/q2_efficient_frontier.png)
+- Figure: [q2_spend_allocation_pie.png](../outputs/figures/q2_spend_allocation_pie.png)
 
 ---
 
@@ -170,9 +172,9 @@ We simulated late-delivery and under-production scenarios against the CFO's 100.
 - **Scenario 2 (50% Under-Production):** Only 7 units built. Creatives serve 2x design capacity, inflating portfolio CPI by +10.64% ($2.06 CPI). Yields **68,281 installs** (-7,264 lost), **$126,892 D120 revenue** (-$13,499 cash deficit), crashing D120 ROAS to **90.38%** (-9.62 pts — **FAIL**). *Mitigation:* Reduce budget to $110k or reallocate toward Net-D offerwall and Net-A text ads.
 
 Refer to:
-- [q3_creative_performance_decomposition.md](file:///c:/Users/sy422/OneDrive/Documents/GitHub/chaos-engine-growth-case/outputs/tables/q3_creative_performance_decomposition.md)
-- [q3_creative_replenishment_schedule.md](file:///c:/Users/sy422/OneDrive/Documents/GitHub/chaos-engine-growth-case/outputs/tables/q3_creative_replenishment_schedule.md)
-- [q3_fatigue_risk_simulation.md](file:///c:/Users/sy422/OneDrive/Documents/GitHub/chaos-engine-growth-case/outputs/tables/q3_fatigue_risk_simulation.md)
-- Figure: [q3_creative_wearout_curves.png](file:///c:/Users/sy422/OneDrive/Documents/GitHub/chaos-engine-growth-case/outputs/figures/q3_creative_wearout_curves.png)
-- Figure: [q3_creative_refresh_timeline.png](file:///c:/Users/sy422/OneDrive/Documents/GitHub/chaos-engine-growth-case/outputs/figures/q3_creative_refresh_timeline.png)
-- Figure: [q1_ltv_growth_curves.png](file:///c:/Users/sy422/OneDrive/Documents/GitHub/chaos-engine-growth-case/outputs/figures/q1_ltv_growth_curves.png)
+- [q3_creative_performance_decomposition.md](../outputs/tables/q3_creative_performance_decomposition.md)
+- [q3_creative_replenishment_schedule.md](../outputs/tables/q3_creative_replenishment_schedule.md)
+- [q3_fatigue_risk_simulation.md](../outputs/tables/q3_fatigue_risk_simulation.md)
+- Figure: [q3_creative_wearout_curves.png](../outputs/figures/q3_creative_wearout_curves.png)
+- Figure: [q3_creative_refresh_timeline.png](../outputs/figures/q3_creative_refresh_timeline.png)
+- Figure: [q1_ltv_growth_curves.png](../outputs/figures/q1_ltv_growth_curves.png)
