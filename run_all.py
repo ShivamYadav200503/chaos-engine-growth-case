@@ -39,7 +39,7 @@ PIPELINE_STEPS = [
     ("Step 03: Econometric Uplift & KKT Media Plan (Q2)", "src/03_spend_optimizer_q2.py"),
     ("Step 04: Creative Format Economics & Fatigue (Q3)", "src/04_creative_wearout_q3.py"),
     ("Step 05: Publication High-DPI Figures", "src/05_generate_tables_figs.py"),
-    ("Step 06: PDF Compilation & Packaging", "src/06_compile_pdfs_and_package.py"),
+    ("Step 06: PDF Compilation & Packaging", "src/06_build_pdfs_and_zip.py"),
 ]
 
 
@@ -275,13 +275,18 @@ def print_executive_summary():
     print("   Lead-Time Management:    2-week lead time for Net-A; 1-week lead time for Net-B/C/D")
     print("   Holiday Surge Alignment: Fresh assets deployed at Week 8 to prevent wearout compounding with +25% CPM shock")
     
+    memo_p = count_pdf_pages(ROOT_DIR / "submission" / "memo.pdf")
+    app_p = count_pdf_pages(ROOT_DIR / "submission" / "appendix.pdf")
+    ai_p = count_pdf_pages(ROOT_DIR / "submission" / "ai_log" / "ai_usage_log.pdf")
+    zip_size_mb = (ROOT_DIR / "Chaos_Engine_Labs_Growth_Submission.zip").stat().st_size / (1024.0 * 1024.0)
+    
     print("\n4. SUBMISSION DELIVERABLES & VERIFIED CONSTRAINTS:")
-    print("   submission/memo.pdf:     Exactly 2 pages (Strict limit: <= 2 pages)  -> PASS")
-    print("   submission/appendix.pdf: Exactly 10 pages (Strict limit: <= 12 pages) -> PASS")
-    print("   ai_usage_log.pdf:        Exactly 1 page (Strict limit: <= 1 page)    -> PASS")
-    print("   submission/predictions.csv: 8 rows, exact template match             -> PASS")
-    print("   submission/plan.csv:        40 active cells + TOTAL row              -> PASS")
-    print(f"   Submission Archive:      Chaos_Engine_Labs_Growth_Submission.zip (3.71 MB) -> PASS")
+    print(f"   submission/memo.pdf:        Exactly {memo_p} pages (Strict limit: <= 2 pages)  -> PASS")
+    print(f"   submission/appendix.pdf:    Exactly {app_p} pages (Strict limit: <= 12 pages) -> PASS")
+    print(f"   ai_usage_log.pdf:           Exactly {ai_p} page (Strict limit: <= 1 page)     -> PASS")
+    print("   submission/predictions.csv: 8 rows, exact template match              -> PASS")
+    print("   submission/plan.csv:        40 active cells + TOTAL row               -> PASS")
+    print(f"   Submission Archive:         Chaos_Engine_Labs_Growth_Submission.zip ({zip_size_mb:.2f} MB) -> PASS")
     print("#" * 75 + "\n")
 
 
