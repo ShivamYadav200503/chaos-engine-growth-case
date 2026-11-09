@@ -1,4 +1,4 @@
 Scenario,Quarter_Spend,Units_Produced,Total_Installs,Installs_Lost,Portfolio_CPI,CPI_Inflation,D120_Revenue,D120_Cash_Loss,D120_ROAS,ROAS_Delta_Pts,CFO_Mandate_Status,Operational_Mitigation
-Baseline (On-Time Replenishment),140391.59,13,63614,0,2.21,0.00%,140896.0,$0.00,100.36%,0.00 pts,PASS (>= 100.0%),Maintain strict 2-wk (Net-A) and 1-wk (Net-B/C/D) production lead time triggers.
-Scenario 1 (2-Week Production Delay),140391.59,13,61421,2194,2.29,+3.57%,136037.52,"-$4,858.48",96.90%,-3.46 pts,FAIL (< 100.0%),Throttle weekly spend by 20% in W3-W4 during delay; pre-produce evergreen backup ad sets.
-Scenario 2 (50% Under-Production),140391.59,7,57497,6117,2.44,+10.64%,127348.31,"-$13,547.69",90.71%,-9.65 pts,FAIL (< 100.0%),Cut quarter budget to $110k or reallocate $25k to Net-D offerwall and high-end Net-A text ads.
+Baseline (On-Time Replenishment),140391.65,13,63612,0,2.21,0.00%,140896.0,$0.00,100.36%,0.00 pts,PASS (>= 100.0%),Maintain strict 2-wk (Net-A) and 1-wk (Net-B/C/D) production lead time triggers.
+Scenario 1 (2-Week Production Delay),140391.65,13,61419,2194,2.29,+3.57%,136037.52,"-$4,858.48",96.90%,-3.46 pts,FAIL (< 100.0%),Throttle weekly spend by 20% in W3-W4 during delay; pre-produce evergreen backup ad sets.
+Scenario 2 (50% Under-Production),140391.65,7,57496,6117,2.44,+10.64%,127348.31,"-$13,547.69",90.71%,-9.65 pts,FAIL (< 100.0%),Cut quarter budget to $110k or reallocate $25k to Net-D offerwall and high-end Net-A text ads.
