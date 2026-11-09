@@ -85,7 +85,7 @@ def compile_memo_pdf():
         
         cfo_lines = [
             ("1. Spend Recommendation:", "Deploy $140,391.59 across 12 weeks strictly meeting 1.0000x D120 ROAS ($158,000 with organic halo). Unconstrained CEO scale option ($250k) and 1-Year cash breakeven ($182.3k) also provided."),
-            ("2. Expected Result:", "75,555 paid installs (79,219 total with organic halo), delivering $140,391.61 Day-120 gross revenue (1.0000x D120 ROAS; 1.0532x blended) and $158,072.89 at 1 Year (1.1259x 1Y ROAS)."),
+            ("2. Expected Result:", "75,555 paid installs (80% CI: [72.1k, 79.2k]), delivering $140,391.61 Day-120 gross revenue (1.0000x D120 ROAS [0.963x, 1.042x]) and $158,072.89 at 1Y (1.1259x 1Y ROAS). With +4.85% organic halo: 78,839 total installs, $147,088 total D120 revenue, and 1.0476x blended ROAS."),
             ("3. Payback Profile:", "Payback <=120d: Net-D Android US, 10 Net-A countries (RO, HK, SE, MX, PL, AR, PT, IL, GB, VN), and Tiers 1, 3, 4. Payback in 1Y: Net-A US, Net-B Android US, Net-C Android US. Non-viable: Net-B iOS US (0.895x 1Y)."),
             ("4. Primary Data Distortions:", "8 critical anomalies proved and repaired: 1.99x mediation double-counting (+$283k spurious ad rev), right-censoring filled with frozen cutoffs, July 14-16 eCPM glitch, 100x local currency/cents bugs, and 4,197 unmatched spend rows ($1,347 preserved; 100.00% spend reconciled)."),
             ("5. Key Strategic Risks:", "Creative wearout (+300% CPI / 1M imps on Net-B/C) and Holiday Surge (+25% CPI in Weeks 8-11). Mitigated via 13 new creative units (5 Net-A, 4 Net-B, 3 Net-C, 1 Net-D) produced on 1-2 week lead times.")
@@ -111,8 +111,8 @@ def compile_memo_pdf():
         # Strategy Comparison Table
         table_headers = ["Planning Strategy", "Quarter Spend", "Budget Share", "Total Installs", "Expected D120 Rev", "D120 ROAS", "1Y ROAS", "Net D120 Cashflow"]
         table_rows = [
-            ["A. Primary CFO Breakeven Plan", "$140,391.59", "56.16%", "79,219", "$140,391.61", "1.0000x", "1.1259x", "+$0.02"],
-            ["B. Blended Organic Breakeven", "$158,000.00", "63.20%", "86,124", "$148,800.00", "0.9418x*", "1.0614x", "-$9,200.00"],
+            ["A. Primary CFO Breakeven Plan", "$140,391.59", "56.16%", "78,839", "$140,391.61", "1.0000x*", "1.1259x", "+$0.02"],
+            ["B. Blended Organic Breakeven", "$158,000.00", "63.20%", "86,124", "$148,800.00", "0.9418x", "1.0614x", "-$9,200.00"],
             ["C. 1-Year Cash Breakeven Plan", "$182,325.00", "72.93%", "95,010", "$161,600.22", "0.8863x", "1.0000x", "-$20,724.78"],
             ["D. CEO Full Budget Growth Plan", "$250,000.00", "100.00%", "113,193", "$191,656.96", "0.7666x", "0.8657x", "-$58,343.04"]
         ]
@@ -134,7 +134,7 @@ def compile_memo_pdf():
                 ax1.text(x + 0.005, t_y + 0.007, escape_dollars(val), color=text_col, fontsize=7.5, fontweight="bold" if is_bold else "normal")
             t_y -= 0.025
             
-        ax1.text(0.05, t_y - 0.005, "*Strategy B achieves 1.0000x blended D120 ROAS when crediting incremental organic halo (+4.85% K-factor, $2.0516 organic LTV).", fontsize=7, color="#64748b", fontstyle="italic")
+        ax1.text(0.05, t_y - 0.005, "*Primary plan achieves 1.0000x direct D120 ROAS ($140,391.61 rev on 75,555 paid installs), and 1.0476x blended ($147,088 rev on 78,839 total installs with verified +4.85% organic halo).", fontsize=7, color="#64748b", fontstyle="italic")
         
         # Embed Frontier Chart
         img_frontier = mpimg.imread(str(FIGS_DIR / "q2_efficient_frontier.png"))
@@ -166,7 +166,7 @@ def compile_memo_pdf():
         sec2_text = (
             "All 5 mandatory active lines meet their >=40% baseline spend floor. Net-D Android US is paced at exactly 0.50x baseline ($28,695.54) "
             "to capture its maximum +56.9% efficiency boost (1.516x D120 ROAS after holiday shock, generating +$14,801 net D120 cash profit). "
-            "Why Net-D is held at 50% while Net-B Android US is at 90.8% ($21,911.59): Due to Net-D's steep diminishing returns exponent (k=0.65 "
+            "Why Net-D is held at 50% while Net-B Android US is at 90.8% ($21,914.86): Due to Net-D's steep diminishing returns exponent (k=0.65 "
             "vs k=0.40 on Net-B), spending beyond 0.50x causes Net-D's marginal D120 revenue to drop to $0.531 per dollar—just below the $0.536 "
             "marginal revenue where Net-B Android (90.8%), Net-B iOS (67.4%), and Net-C Android (60.7%) equilibrate under KKT shadow-price conditions.\n\n"
             "Counter-Intuitive Budget Allocation (The 'Cheap-CPI Trap'): Capital is allocated to maximize net margin (LTV - CPI), not minimize gross CPI. "
